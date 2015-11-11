@@ -22,7 +22,10 @@ public class RodzinaTest {
 	@Test
 	public void iloscChlopcowTest() {
 		Assert.assertEquals(1, nowaRodzina.iloscChlopcow());
-		kazik.getWiek();konfilkty:)
+		Chlopiec kazik = new Chlopiec();
+		kazik.setDataUrodzenia(new Date());
+		kazik.setImie("kazik");
+		nowaRodzina.dodajDziecko(kazik);
 		Assert.assertEquals(2, nowaRodzina.iloscChlopcow());
 	}
 
@@ -36,7 +39,8 @@ public class RodzinaTest {
 	}
 
 	/**
-	 * Metoda oznaczona adnotacj� @Before zostanie uruchomiona przed metod� testow�. S�u�y ona przygotowaniu danych testowych.
+	 * Metoda oznaczona adnotacj� @Before zostanie uruchomiona przed metod� testow�. S�u�y ona przygotowaniu danych
+	 * testowych.
 	 */
 	@Before
 	public void init() {

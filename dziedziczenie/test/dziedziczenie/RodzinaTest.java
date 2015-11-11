@@ -22,14 +22,12 @@ public class RodzinaTest {
 	@Test
 	public void iloscChlopcowTest() {
 		Assert.assertEquals(1, nowaRodzina.iloscChlopcow());
-		Chlopiec kazik = new Chlopiec();
-		nowaRodzina.dodajDziecko(kazik);
-
+		kazik.getWiek();konfilkty:)
 		Assert.assertEquals(2, nowaRodzina.iloscChlopcow());
 	}
 
 	/**
-	 * Metoda testowa musi byæ oznaczona adnotacj¹ @Test Testy uruchamia siê Run->Run as->JUnit Test
+	 * Metoda testowa musi byï¿½ oznaczona adnotacjï¿½ @Test Testy uruchamia siï¿½ Run->Run as->JUnit Test
 	 */
 	@Test
 	public void iloscDziewczynekTest() {
@@ -38,8 +36,7 @@ public class RodzinaTest {
 	}
 
 	/**
-	 * Metoda oznaczona adnotacj¹ @Before zostanie uruchomiona przed metod¹ testow¹. S³u¿y ona przygotowaniu danych
-	 * testowych.
+	 * Metoda oznaczona adnotacjï¿½ @Before zostanie uruchomiona przed metodï¿½ testowï¿½. Sï¿½uï¿½y ona przygotowaniu danych testowych.
 	 */
 	@Before
 	public void init() {

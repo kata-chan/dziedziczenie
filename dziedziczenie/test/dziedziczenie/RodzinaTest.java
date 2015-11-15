@@ -22,9 +22,9 @@ public class RodzinaTest {
 	@Test
 	public void iloscChlopcowTest() {
 		Assert.assertEquals(1, nowaRodzina.iloscChlopcow());
-		Chlopiec kazik = new Chlopiec();
+		Chlopiec kazik = new Chlopiec("kazik");
 		kazik.setDataUrodzenia(new Date());
-		kazik.setImie("kazik");
+
 		nowaRodzina.dodajDziecko(kazik);
 		Assert.assertEquals(2, nowaRodzina.iloscChlopcow());
 	}
@@ -44,14 +44,10 @@ public class RodzinaTest {
 	 */
 	@Before
 	public void init() {
-		mikolajek = new Chlopiec();
-		magma = new Dziewczynka();
-		maurycy = new Mezczyzna();
-		kunegunda = new Kobieta();
-		mikolajek.setImie("mikolaj");
-		magma.setImie("pulpecik");
-		maurycy.setImie("frajer");
-		kunegunda.setImie("lachon");
+		mikolajek = new Chlopiec("mikolaj");
+		magma = new Dziewczynka("pulpecik");
+		maurycy = new Mezczyzna("frajer");
+		kunegunda = new Kobieta("lachon");
 		Date urodzinyMikolajka = new Date(90, 11, 15);
 		Date urodzinyMagmy = new Date(2007 - 1900, 2, 15);
 		Date urodzinyMaurycego = new Date(55, 11, 16);
@@ -71,5 +67,12 @@ public class RodzinaTest {
 		nowaRodzina.dodajDziecko(magma);
 		nowaRodzina.dodajDziecko(mikolajek);
 
+	}
+
+	@Test
+	public void sprawdzImieTest() {
+		Assert.assertEquals("frajer", maurycy.getImie());
+		Assert.assertEquals(Dziecko.DOMYSLNE_IMIE_DZIECKA, new Chlopiec().getImie());
+		Assert.assertEquals(Dziecko.DOMYSLNE_IMIE_DZIECKA, new Dziewczynka().getImie());
 	}
 }

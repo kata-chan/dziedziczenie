@@ -5,9 +5,30 @@ import java.util.Date;
 
 public abstract class Czlowiek {
 	private Date dataUrodzenia;
-	private String imie;
+	private final String imie;
 
 	private ArrayList<String> zainteresowania = new ArrayList<String>();
+
+	public Czlowiek() {
+		imie = "ktos";
+
+	}
+
+	public Czlowiek(String imie) {
+		this(imie, null);
+
+	}
+
+	public Czlowiek(String imie, Date dataUrodzenia) {
+		this(imie, dataUrodzenia, new ArrayList<String>());
+	}
+
+	public Czlowiek(String i, Date dataUrodzenia, ArrayList<String> zainteresowania) {
+		imie = i;
+		this.dataUrodzenia = dataUrodzenia;
+		this.zainteresowania = zainteresowania;
+
+	}
 
 	public void dodajZainteresowanie(String zainteresowanie) {
 
@@ -67,7 +88,4 @@ public abstract class Czlowiek {
 		dataUrodzenia = x;
 	}
 
-	public void setImie(String i) {
-		imie = i;
-	}
 }

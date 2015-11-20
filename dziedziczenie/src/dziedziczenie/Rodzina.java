@@ -3,7 +3,6 @@ package dziedziczenie;
 import java.util.ArrayList;
 
 public class Rodzina {
-
 	Mezczyzna tata;
 	Kobieta mama;
 	ArrayList<Dziecko> dzieci = new ArrayList<Dziecko>();
@@ -15,6 +14,38 @@ public class Rodzina {
 			dzieci.add(d);
 			return true;
 		}
+	}
+
+	public int getWiekRodziny() {
+		int suma = 0;
+		suma += mama.getWiek();
+		suma += tata.getWiek();
+		for (Dziecko dziecko : dzieci) {
+			suma += dziecko.getWiek();
+		}
+		return suma;
+	}
+
+	public Dziecko najstarszeDziecko() {
+		Dziecko dzieciakStarszy = dzieci.get(0);
+		for (Dziecko dziecko : dzieci) {
+			if (dziecko.getDataUrodzenia().before(dzieciakStarszy.getDataUrodzenia())) {
+				dzieciakStarszy = dziecko;
+
+			}
+
+		}
+		return dzieciakStarszy;
+	}
+
+	public Dziecko najmlodszeDziecko() {
+		Dziecko dzieciakMlodszy = dzieci.get(0);
+		for (Dziecko dziecko : dzieci) {
+			if (dziecko.getDataUrodzenia().after(dzieciakMlodszy.getDataUrodzenia())) {
+				dzieciakMlodszy = dziecko;
+			}
+		}
+		return dzieciakMlodszy;
 	}
 
 	public ArrayList<Dziecko> getDzieci() {

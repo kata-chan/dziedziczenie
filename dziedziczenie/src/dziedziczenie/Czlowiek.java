@@ -1,11 +1,12 @@
 package dziedziczenie;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 
 public abstract class Czlowiek {
-	private Date dataUrodzenia;
+	private Calendar dataUrodzenia;
 	private final String imie;
+	private int kieszonkowe;
 
 	private ArrayList<String> zainteresowania = new ArrayList<String>();
 
@@ -19,11 +20,11 @@ public abstract class Czlowiek {
 
 	}
 
-	public Czlowiek(String imie, Date dataUrodzenia) {
+	public Czlowiek(String imie, Calendar dataUrodzenia) {
 		this(imie, dataUrodzenia, new ArrayList<String>());
 	}
 
-	public Czlowiek(String i, Date dataUrodzenia, ArrayList<String> zainteresowania) {
+	public Czlowiek(String i, Calendar dataUrodzenia, ArrayList<String> zainteresowania) {
 		imie = i;
 		this.dataUrodzenia = dataUrodzenia;
 		this.zainteresowania = zainteresowania;
@@ -33,6 +34,16 @@ public abstract class Czlowiek {
 	public void dodajZainteresowanie(String zainteresowanie) {
 
 		zainteresowania.add(zainteresowanie);
+	}
+
+	public int setKieszonkowe(int kasa) {
+		kieszonkowe = kasa;
+		return kieszonkowe;
+
+	}
+
+	public int getKieszonkowe() {
+		return kieszonkowe;
 	}
 
 	@Override
@@ -48,7 +59,7 @@ public abstract class Czlowiek {
 		return false;
 	}
 
-	public Date getDataUrodzenia() {
+	public Calendar getDataUrodzenia() {
 		return dataUrodzenia;
 
 	}
@@ -59,12 +70,17 @@ public abstract class Czlowiek {
 	}
 
 	public int getWiek() {
-		Date aktualnaData = new Date();
-		int aktualnyRok = aktualnaData.getYear();
-		int rokUrodzenia = dataUrodzenia.getYear();
+		Calendar aktualnaData = Calendar.getInstance();
+		int aktualnyRok = aktualnaData.get(Calendar.YEAR);
+		int rokUrodzenia = dataUrodzenia.get(Calendar.YEAR);
 		int wiek = aktualnyRok - rokUrodzenia;
 		return wiek;
 
+	}
+
+	@Override
+	public String toString() {
+		return imie;
 	}
 
 	public ArrayList<String> getZainteresowania() {
@@ -84,8 +100,16 @@ public abstract class Czlowiek {
 		}
 	}
 
-	public void setDataUrodzenia(Date x) {
+	public void setDataUrodzenia(Calendar x) throws DataUrodzinException {
+		if (x.after(Calendar.getInstance())) {
+			throw new DataUrodzinException();
+		}
+		Calendar data1900 = Calendar.getInstance();
+		data1900.set(1900, 0, 12);
+		if (x.before(data1900)) {
+			throw new DataUrodzinException();
+
+		}
 		dataUrodzenia = x;
 	}
-
 }

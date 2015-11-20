@@ -16,6 +16,11 @@ public class FormatTest {
 	}
 
 	@Test
+	public void podajKieszonkoweTest() {
+		Assert.assertEquals("mikolaj kieszonkowe 15 zł", Format.podajKieszonkowe(15, "mikolaj"));
+	}
+
+	@Test
 	public void NumerTelefonuFormatTest() {
 		int telefon = 123456789;
 		Assert.assertEquals("telefon 123 456 789", Format.numerTelefonuFormat(telefon));

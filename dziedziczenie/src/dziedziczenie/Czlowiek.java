@@ -11,17 +11,19 @@ public abstract class Czlowiek {
 	private ArrayList<String> zainteresowania = new ArrayList<String>();
 
 	public Czlowiek() {
-		imie = "ktos";
+		imie = "ktos"; // jezeli nie podasz imienia to automatycznie je przypisuje, ponieważ zmienna finale musi miec
+						// przypisaną
+		// wartośc albo w konstruktorze albo w deklaracji.
 
 	}
 
 	public Czlowiek(String imie) {
-		this(imie, null);
+		this(imie, null);// wywołuje konstruktor czlowiek z takimi parametrami jakie posiada
 
 	}
 
 	public Czlowiek(String imie, Calendar dataUrodzenia) {
-		this(imie, dataUrodzenia, new ArrayList<String>());
+		this(imie, dataUrodzenia, new ArrayList<String>());// dodaje pusta arrayListe i wywołuje kolejny konstruktor
 	}
 
 	public Czlowiek(String i, Calendar dataUrodzenia, ArrayList<String> zainteresowania) {
@@ -36,9 +38,8 @@ public abstract class Czlowiek {
 		zainteresowania.add(zainteresowanie);
 	}
 
-	public int setKieszonkowe(int kasa) {
+	public void setKieszonkowe(int kasa) {// metody set nigdy nic nie zwracają
 		kieszonkowe = kasa;
-		return kieszonkowe;
 
 	}
 
@@ -47,10 +48,10 @@ public abstract class Czlowiek {
 	}
 
 	@Override
-	public boolean equals(Object other) {
+	// przeslonienięcie metody z klasy bazowej Object
+	public boolean equals(Object other) {//
 		if (other != null && other instanceof Czlowiek) {
 			Czlowiek otherCzlowiek = (Czlowiek) other;
-
 			if ((imie).equals(otherCzlowiek.getImie()) && (dataUrodzenia.equals(otherCzlowiek.getDataUrodzenia()))) {
 				return true;
 			}
@@ -79,7 +80,8 @@ public abstract class Czlowiek {
 	}
 
 	@Override
-	public String toString() {
+	// przesloniecie metody z klasy object
+	public String toString() {// np.przy testach nie wychodzi upsdziu tylko imie
 		return imie;
 	}
 
@@ -93,13 +95,14 @@ public abstract class Czlowiek {
 		if (zainteresowania.size() > 0) {
 			// (!zainteresowania.isEmpty()) {
 			System.out.println("mam " + zainteresowania.size() + " zainteresowania oto one"
-					+ zainteresowania.toString());
+					+ zainteresowania.toString());// wypisuje wszystkie zainteresowania
 
 		} else {
 			System.out.println("nie mam zainteresowan");
 		}
 	}
 
+	// walidacja - sprawdzanie danych wejsciowych
 	public void setDataUrodzenia(Calendar x) throws DataUrodzinException {
 		if (x.after(Calendar.getInstance())) {
 			throw new DataUrodzinException();
@@ -108,7 +111,6 @@ public abstract class Czlowiek {
 		data1900.set(1900, 0, 12);
 		if (x.before(data1900)) {
 			throw new DataUrodzinException();
-
 		}
 		dataUrodzenia = x;
 	}

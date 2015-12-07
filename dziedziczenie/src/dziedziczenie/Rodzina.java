@@ -3,6 +3,7 @@ package dziedziczenie;
 import java.util.ArrayList;
 
 public class Rodzina {
+	// private static final boolean after.dzieci.get(1) = false;
 	Mezczyzna tata;
 	Kobieta mama;
 	ArrayList<Dziecko> dzieci = new ArrayList<Dziecko>();
@@ -27,25 +28,30 @@ public class Rodzina {
 	}
 
 	public Dziecko najstarszeDziecko() {
-		Dziecko dzieciakStarszy = dzieci.get(0);
-		for (Dziecko dziecko : dzieci) {
-			if (dziecko.getDataUrodzenia().before(dzieciakStarszy.getDataUrodzenia())) {
-				dzieciakStarszy = dziecko;
-
-			}
+		if (dzieci.isEmpty()) {
+			return null;
 
 		}
-		return dzieciakStarszy;
+		Dziecko najstarszeDziecko = dzieci.get(0);
+		for (Dziecko jakiekolwiek : dzieci) {
+			if (jakiekolwiek.getDataUrodzenia().before(najstarszeDziecko.getDataUrodzenia())) {
+
+				najstarszeDziecko = jakiekolwiek;
+			}
+		}
+		return najstarszeDziecko;
 	}
 
 	public Dziecko najmlodszeDziecko() {
-		Dziecko dzieciakMlodszy = dzieci.get(0);
-		for (Dziecko dziecko : dzieci) {
-			if (dziecko.getDataUrodzenia().after(dzieciakMlodszy.getDataUrodzenia())) {
-				dzieciakMlodszy = dziecko;
+		Dziecko najmlodszeDziecko = dzieci.get(0);
+		for (Dziecko jakiekolwiek : dzieci) {
+			if (jakiekolwiek.getDataUrodzenia().after(najmlodszeDziecko.getDataUrodzenia())) {
+
+				najmlodszeDziecko = jakiekolwiek;
 			}
 		}
-		return dzieciakMlodszy;
+		return najmlodszeDziecko;
+
 	}
 
 	public ArrayList<Dziecko> getDzieci() {
@@ -68,13 +74,16 @@ public class Rodzina {
 	}
 
 	public int iloscChlopcow() {
-		int iloscChlopcow = 0;
+
+		int iloscChlocpow = 0;
 		for (Dziecko dziecko : dzieci) {
 			if (dziecko instanceof Chlopiec) {
-				iloscChlopcow++;
+
+				iloscChlocpow++;
 			}
+
 		}
-		return iloscChlopcow;
+		return iloscChlocpow;
 	}
 
 	public int iloscDziewczynek() {
@@ -82,11 +91,9 @@ public class Rodzina {
 		for (Dziecko dziecko : dzieci) {
 			if (dziecko instanceof Dziewczynka) {
 				iloscDziewczynek++;
-
 			}
 		}
 		return iloscDziewczynek;
-
 	}
 
 	public void setMama(Kobieta m) {

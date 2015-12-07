@@ -47,12 +47,14 @@ public class RodzinaTest {
 	public void przyszlaDataTest() {
 		Calendar magmusiUr = Calendar.getInstance();
 		magmusiUr.set(2225, 0, 11);
+		Calendar poprzedniaDataMagmy = magma.getDataUrodzenia();
 		try {
 			magma.setDataUrodzenia(magmusiUr);
 			Assert.fail(" blad nie zostal rzucony, nie jest ok");
 			System.out.println("to nie zostanie wypisane");
 		} catch (DataUrodzinException ex) {
 			System.out.println("jest ok");
+			Assert.assertEquals(poprzedniaDataMagmy, magma.getDataUrodzenia());
 		}
 	}
 

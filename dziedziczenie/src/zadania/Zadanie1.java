@@ -1,8 +1,8 @@
-package kalkulator;
+package zadania;
 
 import java.util.Scanner;
 
-public class ZadaniePierwsze {
+public class Zadanie1 {
 	// Napisać program, który pobiera od użytkownika liczbę całkowitą dodatnią, a następnie
 	// wyświetla na ekranie kolejno wszystkie liczby niepatrzyste nie większe od
 	// podanej liczby. Przykład, dla 15 program powinien wyświetlić 1, 3, 5, 7, 9, 11, 13,

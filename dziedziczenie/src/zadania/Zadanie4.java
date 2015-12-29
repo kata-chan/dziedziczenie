@@ -1,4 +1,4 @@
-package formatowanie;
+package zadania;
 
 import java.util.Scanner;
 

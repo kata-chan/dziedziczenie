@@ -1,4 +1,4 @@
-package formatowanie;
+package zadania;
 
 import java.util.Scanner;
 
@@ -11,7 +11,14 @@ public class Zadanie10 {
 		System.out.println("podaj liczbe całkowita");
 
 		int n = konsola.nextInt();
-		int i = 1;
+		System.out.println("dla liczby " + n + " dzielniki to:");
+		for (int i = 1; i <= n; i++) {
+			if (n % i == 0) {
+				System.out.println(i);
+			}
 
+		}
+		konsola.close();
 	}
+
 }

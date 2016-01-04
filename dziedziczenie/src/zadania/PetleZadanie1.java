@@ -25,7 +25,8 @@ public class PetleZadanie1 {
 	public static void main(String[] arg) {
 
 		int[] liczbyCalkowite = new int[10];
-
+		int a = 0;
+		int b = 0;
 		System.out.println("wylosowane liczby:");
 		Random r = new Random();
 		int liczbaMin = Integer.MAX_VALUE;
@@ -46,12 +47,24 @@ public class PetleZadanie1 {
 
 		System.out.println("");
 		System.out.println("Min" + liczbaMin + ", max:" + liczbaMax);
-		System.out.println("średnia:" + suma / 10);
-		System.out.println("średnia:" + suma / (liczbyCalkowite.length + 1));
+		int srednia = suma / (liczbyCalkowite.length);
+		System.out.println("średnia:" + suma / (liczbyCalkowite.length));
 		System.out.println("Liczby w odwrotnej kolejnosci");
-		for (int j = (liczbyCalkowite.length - 1); j < liczbyCalkowite.length; j--) {
+		for (int j = (liczbyCalkowite.length - 1); j >= 0; j--) {
 
 			System.out.print(liczbyCalkowite[j] + " ");
 		}
+		for (int i = 0; i < liczbyCalkowite.length; i++) {
+			if (liczbyCalkowite[i] > srednia) {
+				a++;
+
+			}
+			if (liczbyCalkowite[i] < srednia) {
+				b++;
+			}
+		}
+		System.out.println("");
+		System.out.println("Mniejszych od śr.:" + b);
+		System.out.println("Wiekszych od śr" + a);
 	}
 }

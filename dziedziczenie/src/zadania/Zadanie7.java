@@ -31,10 +31,8 @@ public class Zadanie7 {
 		System.out.println("podaj znak wypelnienia prostokata");
 		String znak = konsola.next();
 		konsola.close();
-
 		for (int c = 0; c < y - 1; c++) {
 			System.out.println("");
-
 		}
 		for (int i = 0; i < a; i++) {
 			for (int d = 0; d < x; d++) {

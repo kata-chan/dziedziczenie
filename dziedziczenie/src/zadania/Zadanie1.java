@@ -18,6 +18,7 @@ public class Zadanie1 {
 			for (int i = 1; i <= liczba; i++) {
 				if (i % 2 == 1) {
 					System.out.println(i);
+
 				}
 
 			}

@@ -40,6 +40,7 @@ public class PlikiTekstowe5 {
 		String imie = " ";
 		String nazwisko = " ";
 		int lata = 0;
+		String lataDoEmerytury = "";
 		String wiek = " ";
 		String kobieta = "K";
 		String mezczyzna = "M";
@@ -66,13 +67,17 @@ public class PlikiTekstowe5 {
 			int wiekPracownika = Integer.parseInt(wiek);
 			if (plec.equals(kobieta)) {
 				lata = 60 - wiekPracownika;
-				kzapis.write(lata);
-				kzapis.write(" " + "\n");
+				lataDoEmerytury = "" + lata;
+				kzapis.write(imie + " ");
+				kzapis.write(nazwisko + " ");
+				kzapis.write(lataDoEmerytury + "\n");
 			}
 			if (plec.equals(mezczyzna)) {
 				lata = 65 - wiekPracownika;
-				mzapis.write(lata);
-				mzapis.write(" " + "\n");
+				lataDoEmerytury = "" + lata;
+				mzapis.write(imie + " ");
+				mzapis.write(nazwisko + " ");
+				mzapis.write(lataDoEmerytury + "\n");
 			}
 
 		}

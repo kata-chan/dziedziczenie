@@ -1,6 +1,8 @@
 package projekt;
 
-import java.io.FileNotFoundException;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,7 +12,7 @@ public class MenuPracownikow {
 
 	static Scanner skaner = new Scanner(System.in);
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		MenuPracownikow mp = new MenuPracownikow();
 		mp.glownaPetla();
 
@@ -91,7 +93,7 @@ public class MenuPracownikow {
 		// dokonczyc
 	}
 
-	public void glownaPetla() throws FileNotFoundException {
+	public void glownaPetla() throws IOException {
 		petla: while (true) {
 			wypiszMenu();
 
@@ -160,12 +162,64 @@ public class MenuPracownikow {
 	}
 
 	private void edycjaDanych() {
-		// TODO Auto-generated method stub
+		int numerPola = 0;
+		for (Pracownik pracownik : pracownicy) {
+			numerPola++;
+			System.out.print(numerPola + ". ");
+			pracownik.wyswietlDaneOPracowniku();
+		}
+
+		System.out.println("wybierz numer indeksu pracownika, którego chcesz usunąć");
+		int indeks = skaner.nextInt();
+
+		Pracownik pracownikEdytowany = pracownicy.get(indeks - 1);
+		pracownikEdytowany.wyswietlanieSpecjalne();
+		int liczba;
+		do {
+			System.out.println("Podaj co chcesz edytować");
+			System.out.println("1.nazwisko");
+			System.out.println("2.numer działu");
+			System.out.println("3.płaca");
+			System.out.println("4.wiek");
+			System.out.println("5.liczba dzieci");
+			System.out.println("6.stan cywilny");
+			liczba = skaner.nextInt();
+		} while (liczba < 1 || liczba > 6);
+
+		System.out.println("podaj nową wartość");
+		switch (liczba) {
+		case 1:
+			pracownikEdytowany.setNazwisko(skaner.next());
+			break;
+		case 2:
+			pracownikEdytowany.setNrdzialu(skaner.nextInt());
+			break;
+		case 3:
+			pracownikEdytowany.setPlace(skaner.nextInt());
+		case 4:
+			pracownikEdytowany.setWiek(skaner.nextInt());
+			break;
+		case 5:
+			pracownikEdytowany.setDzieci(skaner.nextInt());
+			break;
+		case 6:
+			pracownikEdytowany.setStanCywilny(skaner.nextBoolean());
+
+		}
 
 	}
 
-	private void eksport() {
-		// TODO Auto-generated method stub
+	private void eksport() throws IOException {
+		System.out.println("podaj nazwę pliku ");
+		String nazwaPliku = skaner.next();
+		String nazwaPlikuTxt = nazwaPliku + ".txt";
+		File plik = new File(nazwaPlikuTxt);
+		FileWriter filewriter = new FileWriter(plik);
+		for (Pracownik pracownik : pracownicy) {
+			filewriter.write(pracownik.getNazwisko() + " " + pracownik.getImie() + " " + pracownik.getPlec() + " " + pracownik.getNr_dzialu() + " "
+					+ pracownik.getWiek() + " " + pracownik.getPlace() + " " + pracownik.getDzieci() + " " + pracownik.getStanCywilny() + " \n");
+		}
+		filewriter.close();
 
 	}
 
@@ -210,8 +264,15 @@ public class MenuPracownikow {
 	}
 
 	private void usunPracownika() {
-		// TODO Auto-generated method stub
-
+		int numerPola = 0;
+		for (Pracownik pracownik : pracownicy) {
+			numerPola++;
+			System.out.print(numerPola + ". ");
+			pracownik.wyswietlDaneOPracowniku();
+		}
+		System.out.println("wybierz numer indeksu pracownika, którego chcesz usunąć");
+		int indeks = skaner.nextInt();
+		pracownicy.remove(indeks - 1);
 	}
 
 	private void wprowadzWlasnaNazwePliku() {

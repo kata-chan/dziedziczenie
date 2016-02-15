@@ -47,7 +47,7 @@ public class Pracownik {
 		return plec;
 	}
 
-	public boolean getStan_cywilny() {
+	public boolean getStanCywilny() {
 		return stanCywilny;
 	}
 

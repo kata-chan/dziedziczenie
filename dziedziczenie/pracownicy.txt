@@ -1,4 +1,2 @@
-Tomasz Nowak M 45
-Marta Ziobro K 42
-Jan Kowalski M 27
-Ewelina Tusk K 59
+oberzyna malina k 13 45 12500.0 2 false 
+Bokser mikołaj m 12 26 1350.0 0 false 

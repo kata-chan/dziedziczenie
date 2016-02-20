@@ -41,7 +41,8 @@ public class MenuPracownikow {
 		System.out.println("c - Wyświetlanie największych pensji z wszystkich kobiety i wszystkich mężczyzny");
 		System.out.println("d - Wyświetlenie wszystkich działów");
 		System.out.println("e - Wyświetlenie stosunku średniej płacy kobiet do średniej płacy mężczyzn");
-		System.out.println("f - Zwiększanie pensji wszystkim pracownikom o 10 procent oraz dodatkowo za specjalne cechy");
+		System.out
+				.println("f - Zwiększanie pensji wszystkim pracownikom o 10 procent oraz dodatkowo za specjalne cechy");
 		System.out.println("g - Zwiększenie pensji wszystkim pracownikom o kwotę podaną przez użytkownika ");
 		System.out.println("h - Sortowanie pracowników (w pliku) według nazwiska");
 		System.out.println("i - Sortowanie pracowników (w pliku) według wysokości ich pensji");
@@ -50,10 +51,14 @@ public class MenuPracownikow {
 
 		switch (literaWybrana) {
 		case "a":
-			obliczanieLiczbyPracownikowPensja();
+			System.out.println("podaj wielkosc pensji");
+			float pensjaPorownywana = skaner.nextFloat();
+			ObliczanieLiczbyPracownikowZPensjaNieMniejszaNizPodanaPrzezUzytkownika(pensjaPorownywana);
 			break;
 		case "b":
-			oblicznieSredniejPlacyWDziale();
+			System.out.println("Podaj numer działu:");
+			int numerDzialu = skaner.nextInt();
+			oblicznieSredniejPlacyWDziale(numerDzialu);
 			break;
 		case "c":
 			najwyzszePensje();
@@ -86,8 +91,9 @@ public class MenuPracownikow {
 		System.out.println("a - Wyświetlenie danych (linii z pliku) o osobie z najdłuższym nazwiskiem.");
 		System.out.println("b - Obliczenie średniego wieku osób posiadających dzieci.");
 		System.out.println("c - Zakodowanie niektórych danych w pliku");
-		System.out.println("d - Utworzenie pliku 'pracownicy.html' (tekstowy), w którym na podstawie pliku tekstowego o pracownikach\r\n" +
-				"tworzona jest tabela zapisana w HTML");
+		System.out
+				.println("d - Utworzenie pliku 'pracownicy.html' (tekstowy), w którym na podstawie pliku tekstowego o pracownikach\r\n"
+						+ "tworzona jest tabela zapisana w HTML");
 
 		String literaWybrana = skaner.next();
 		// dokonczyc
@@ -169,7 +175,7 @@ public class MenuPracownikow {
 			pracownik.wyswietlDaneOPracowniku();
 		}
 
-		System.out.println("wybierz numer indeksu pracownika, którego chcesz usunąć");
+		System.out.println("wybierz numer indeksu pracownika, którego chcesz edytować");
 		int indeks = skaner.nextInt();
 
 		Pracownik pracownikEdytowany = pracownicy.get(indeks - 1);
@@ -216,8 +222,9 @@ public class MenuPracownikow {
 		File plik = new File(nazwaPlikuTxt);
 		FileWriter filewriter = new FileWriter(plik);
 		for (Pracownik pracownik : pracownicy) {
-			filewriter.write(pracownik.getNazwisko() + " " + pracownik.getImie() + " " + pracownik.getPlec() + " " + pracownik.getNr_dzialu() + " "
-					+ pracownik.getWiek() + " " + pracownik.getPlace() + " " + pracownik.getDzieci() + " " + pracownik.getStanCywilny() + " \n");
+			filewriter.write(pracownik.getNazwisko() + " " + pracownik.getImie() + " " + pracownik.getPlec() + " "
+					+ pracownik.getNr_dzialu() + " " + pracownik.getWiek() + " " + pracownik.getPlace() + " "
+					+ pracownik.getDzieci() + " " + pracownik.getStanCywilny() + " \n");
 		}
 		filewriter.close();
 
@@ -229,17 +236,50 @@ public class MenuPracownikow {
 	}
 
 	private void najwyzszePensje() {
-		// TODO Auto-generated method stub
+		float maxK = Float.MIN_VALUE;
+		float maxM = Float.MIN_VALUE;
+		float najK = 0;
+		float najM = 0;
+		for (Pracownik pracownik : pracownicy) {
+			if (pracownik.getPlec() == 'K') {
+				if (pracownik.getPlace() > maxK) {
+					maxK = pracownik.getPlace();
+				}
+			}
+			if (pracownik.getPlec() == 'M') {
+				if (pracownik.getPlace() > maxM) {
+					maxM = pracownik.getPlace();
+				}
+			}
+		}
+		System.out.println("największa pensja kobiety: " + maxK);
+		System.out.println("największa pensja mężczyzny: " + maxM);
 
 	}
 
-	private void obliczanieLiczbyPracownikowPensja() {
-		// TODO Auto-generated method stub
+	private void ObliczanieLiczbyPracownikowZPensjaNieMniejszaNizPodanaPrzezUzytkownika(float pensjaPodana) {
+
+		int pracownicyPowyzejPensji = 0;
+		for (Pracownik pracownik : pracownicy) {
+			if (pracownik.pensjaPowWart(pensjaPodana) == true) {
+				pracownicyPowyzejPensji++;
+			}
+		}
+		System.out.println("pracownicy powyżej pensji: " + pracownicyPowyzejPensji);
 
 	}
 
-	private void oblicznieSredniejPlacyWDziale() {
-		// TODO Auto-generated method stub
+	private void oblicznieSredniejPlacyWDziale(int numerDzialu) {
+		int liczbaPracownikow = 0;
+		float suma = 0;
+		for (Pracownik pracownik : pracownicy) {
+			if (pracownik.getNr_dzialu() == numerDzialu) {
+				liczbaPracownikow++;
+				suma += pracownik.getPlace();
+			}
+		}
+		System.out.println("srednia płaca w dziale:");
+		System.out.println(suma / liczbaPracownikow);
 
 	}
 
@@ -259,8 +299,26 @@ public class MenuPracownikow {
 	}
 
 	private void sredniaPlacyKDoM() {
-		// TODO Auto-generated method stub
+		float sumaK = 0;
+		float sumaM = 0;
+		int k = 0;
+		int m = 0;
+		for (Pracownik pracownik : pracownicy) {
+			if (pracownik.getPlec() == 'K') {
+				sumaK += pracownik.getPlace();
+				k++;
+			}
+			if (pracownik.getPlec() == 'M') {
+				sumaM += pracownik.getPlace();
+				m++;
+			}
 
+		}
+		float srPlK = sumaK / k;
+		float srPlM = sumaM / m;
+		System.out.println("srednia płacy kobiet: " + srPlK);
+		System.out.println("srednia płacy mężczyzn: " + srPlM);
+		System.out.println("stosunek redniej płacy kobiet do średniej płacy mężczyzn: " + srPlK / srPlM);
 	}
 
 	private void usunPracownika() {

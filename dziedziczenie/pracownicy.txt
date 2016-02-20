@@ -1,2 +1,4 @@
-oberzyna malina k 13 45 12500.0 2 false 
-Bokser mikołaj m 12 26 1350.0 0 false 
+oberzyna malina M 13 45 12500.0 2 false 
+Bokser mikołaj K 12 26 1350.0 0 false 
+Pimpus cezary M 12 32 1200.0 3 true
+Brzydula ula K 45 33 1750.0 1 false

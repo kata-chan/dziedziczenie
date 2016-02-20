@@ -20,17 +20,18 @@ public class PlikiTekstowe3 {
 		Scanner skaner = new Scanner(System.in);
 		System.out.println("podaj nazwę pliku");
 		String nazwaPliku = skaner.nextLine();
-		sumujIZapisz(nazwaPliku);
+		boolean prawda = true;
+		sumujIZapisz(nazwaPliku, prawda);
 		skaner.close();
 	}
 
-	public static void sumujIZapisz(String nazwaPliku) throws IOException {
+	public static void sumujIZapisz(String nazwaPliku, boolean prawda) throws IOException {
 
 		// File plik = new File(nazwaPliku);
 		FileReader fileReader = new FileReader(nazwaPliku);
 		BufferedReader reader = new BufferedReader(fileReader);
 		FileWriter zapis = new FileWriter(nazwaPliku);
-		int suma = 0;
+		Integer suma = new Integer(0);
 		int liczba = 0;
 		while (true) {
 			String linijka = reader.readLine();
@@ -40,12 +41,14 @@ public class PlikiTekstowe3 {
 			for (int i = 0; i < linijka.length(); i++) {
 				char znak = linijka.charAt(i);
 				if (znak >= '0' && znak <= '9') {
-					liczba = Integer.valueOf("" + znak);
+					// liczba = Integer.valueOf("" + znak);
 
 				}
 				suma += liczba;
 			}
-			zapis.write(suma + 1);
+			suma = suma + 1;
+
+			zapis.append(suma);
 		}
 		zapis.close();
 		reader.close();

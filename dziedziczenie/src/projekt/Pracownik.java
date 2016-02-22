@@ -3,10 +3,10 @@ package projekt;
 public class Pracownik {
 
 	private String imie;
-	private String nazwisko;
+	public String nazwisko;
 	private char plec;
 	private int nrDzialu;
-	private float place;
+	public float place;
 	private int wiek;
 	private int dzieci;
 	private boolean stanCywilny;

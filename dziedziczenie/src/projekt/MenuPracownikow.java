@@ -1,9 +1,13 @@
 package projekt;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class MenuPracownikow {
@@ -13,7 +17,11 @@ public class MenuPracownikow {
 	static Scanner skaner = new Scanner(System.in);
 
 	public static void main(String[] args) throws IOException {
+
 		MenuPracownikow mp = new MenuPracownikow();
+		String nazwa = "pracownicy.txt";
+		mp.wprowadzWlasnaNazwePliku(nazwa);
+
 		mp.glownaPetla();
 
 	}
@@ -91,12 +99,46 @@ public class MenuPracownikow {
 		System.out.println("a - Wyświetlenie danych (linii z pliku) o osobie z najdłuższym nazwiskiem.");
 		System.out.println("b - Obliczenie średniego wieku osób posiadających dzieci.");
 		System.out.println("c - Zakodowanie niektórych danych w pliku");
-		System.out
-				.println("d - Utworzenie pliku 'pracownicy.html' (tekstowy), w którym na podstawie pliku tekstowego o pracownikach\r\n"
-						+ "tworzona jest tabela zapisana w HTML");
+		System.out.println("d - Utworzenie pliku 'pracownicy.html' (tekstowy), w którym na podstawie pliku tekstowego o pracownikach\r\n"
+				+ "tworzona jest tabela zapisana w HTML");
 
 		String literaWybrana = skaner.next();
-		// dokonczyc
+
+		switch (literaWybrana) {
+		case "a":
+			osobaZNajdluzszymNazwiskiem();
+			break;
+		case "b":
+			sredniWiekOsPosiadajacychDzieci();
+			break;
+		case "c":
+			zakodowanieDanychWPliku();
+			break;
+		case "d":
+			pracownicyHTML();
+			break;
+
+		}
+	}
+
+	private void pracownicyHTML() {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void zakodowanieDanychWPliku() {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void sredniWiekOsPosiadajacychDzieci() {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void osobaZNajdluzszymNazwiskiem() {
+		// TODO Auto-generated method stub
+
 	}
 
 	public void glownaPetla() throws IOException {
@@ -133,7 +175,9 @@ public class MenuPracownikow {
 				informacjaOProgramie();
 				break;
 			case 9:
-				wprowadzWlasnaNazwePliku();
+				System.out.println("podaj własną nazwę pliku");
+				String nowaNazwa = skaner.nextLine();
+				wprowadzWlasnaNazwePliku(nowaNazwa);
 
 				break;
 			case 10:
@@ -210,7 +254,8 @@ public class MenuPracownikow {
 			break;
 		case 6:
 			pracownikEdytowany.setStanCywilny(skaner.nextBoolean());
-
+			// case 7:
+			// break;
 		}
 
 	}
@@ -284,17 +329,38 @@ public class MenuPracownikow {
 	}
 
 	private void podwyzki() {
-		// TODO Auto-generated method stub
+		for (Pracownik pracownik : pracownicy) {
+			// float place = pracownik.getPlace();
+			// place = place + (place * (10 / 100.f));
+			// pracownik.setPlace(place);
+			pracownik.obliczaniePodwyzki(10);
+		}
 
 	}
 
+	class NazwiskoCompare implements Comparator<Pracownik> {
+		@Override
+		public int compare(Pracownik a1, Pracownik a2) {
+			return a1.getNazwisko().compareTo(a2.getNazwisko());
+		}
+	}
+
+	class PlaceCompare implements Comparator<Pracownik> {
+		@Override
+		public int compare(Pracownik a1, Pracownik a2) {
+			return Float.valueOf(a1.getPlace()).compareTo(Float.valueOf(a2.getPlace()));
+		}
+	}
+
 	private void sortowaniePracownikowWgNazwiska() {
-		// TODO Auto-generated method stub
+		NazwiskoCompare nc = new NazwiskoCompare();
+		Collections.sort(pracownicy, nc);
 
 	}
 
 	private void sortowaniePracownikowWgpensji() {
-		// TODO Auto-generated method stub
+		PlaceCompare pc = new PlaceCompare();
+		Collections.sort(pracownicy, pc);
 
 	}
 
@@ -333,8 +399,27 @@ public class MenuPracownikow {
 		pracownicy.remove(indeks - 1);
 	}
 
-	private void wprowadzWlasnaNazwePliku() {
-		// TODO Auto-generated method stub
+	private void wprowadzWlasnaNazwePliku(String plik) throws IOException {
+		FileReader fr = new FileReader(plik);
+		BufferedReader br = new BufferedReader(fr);
+		while (true) {
+			String wers = br.readLine();
+			if (wers == null) {
+				break;
+			}
+			String[] wczytywani = wers.split(" ");
+			Pracownik nowy = new Pracownik();
+			nowy.setImie(wczytywani[1]);
+			nowy.setNazwisko(wczytywani[0]);
+			char plec = (wczytywani[2]).charAt(0);
+			nowy.setPlec(plec);
+			nowy.setNrdzialu(Integer.parseInt(wczytywani[3]));
+			nowy.setWiek(Integer.parseInt(wczytywani[4]));
+			nowy.setPlace(Float.parseFloat(wczytywani[5]));
+			nowy.setDzieci(Integer.parseInt(wczytywani[6]));
+			nowy.setStanCywilny(Boolean.parseBoolean(wczytywani[7]));
+			pracownicy.add(nowy);
+		}
 
 	}
 

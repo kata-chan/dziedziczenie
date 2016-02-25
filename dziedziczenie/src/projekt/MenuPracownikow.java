@@ -55,7 +55,7 @@ public class MenuPracownikow {
 		System.out.println("h - Sortowanie pracowników (w pliku) według nazwiska");
 		System.out.println("i - Sortowanie pracowników (w pliku) według wysokości ich pensji");
 
-		String literaWybrana = skaner.next();
+		String literaWybrana = skaner.nextLine();
 
 		switch (literaWybrana) {
 		case "a":
@@ -84,7 +84,9 @@ public class MenuPracownikow {
 			zwiekszeniePensjiWszystkimPracownikomOPodanaKwote();
 			break;
 		case "h":
-			sortowaniePracownikowWgNazwiska();
+			System.out.println("Sortuj w kolejności (true - rosnąco, false - malejąco)");
+			boolean kolejnosc = Boolean.valueOf(skaner.nextLine());
+			sortowaniePracownikowWgNazwiska(kolejnosc);
 			break;
 		case "i":
 			sortowaniePracownikowWgpensji();
@@ -102,7 +104,7 @@ public class MenuPracownikow {
 		System.out.println("d - Utworzenie pliku 'pracownicy.html' (tekstowy), w którym na podstawie pliku tekstowego o pracownikach\r\n"
 				+ "tworzona jest tabela zapisana w HTML");
 
-		String literaWybrana = skaner.next();
+		String literaWybrana = skaner.nextLine();
 
 		switch (literaWybrana) {
 		case "a":
@@ -121,31 +123,68 @@ public class MenuPracownikow {
 		}
 	}
 
+	private void osobaZNajdluzszymNazwiskiem() {
+
+		Pracownik dlugieNazwisko = new Pracownik();
+		dlugieNazwisko.setNazwisko("Bzz");
+
+		for (Pracownik pracownik : pracownicy) {
+			if (pracownik.getNazwisko().length() > dlugieNazwisko.getNazwisko().length()) {
+				dlugieNazwisko = pracownik;
+			}
+		}
+		System.out.println("pracownik z najdluzszym nazwikskiem:");
+		dlugieNazwisko.wyswietlanieOkrojone();
+	}
+
 	private void pracownicyHTML() {
 		// TODO Auto-generated method stub
 
 	}
 
 	private void zakodowanieDanychWPliku() {
-		// TODO Auto-generated method stub
+		int osoba = 0;
+		float suma = 0;
 
+		for (Pracownik pracownik : pracownicy) {
+			suma += pracownik.getPlace();
+			osoba++;
+		}
+		float srednia = suma / osoba;
+		System.out.println("srednia placa: " + srednia);
+		String zakodowaneNazwisko = "";
+		for (Pracownik pracownik : pracownicy) {
+			StringBuffer sb = new StringBuffer();
+			if (srednia < pracownik.getPlace()) {
+				sb.append(pracownik.getNazwisko().charAt(0));
+				for (int i = 1; i < pracownik.getNazwisko().length(); i++) {
+					sb.append('*');
+				}
+				zakodowaneNazwisko = sb.toString();
+				pracownik.setNazwisko(zakodowaneNazwisko);
+			}
+			System.out.println(zakodowaneNazwisko);
+		}
 	}
 
 	private void sredniWiekOsPosiadajacychDzieci() {
-		// TODO Auto-generated method stub
-
-	}
-
-	private void osobaZNajdluzszymNazwiskiem() {
-		// TODO Auto-generated method stub
-
+		int osoba = 0;
+		int suma = 0;
+		for (Pracownik pracownik : pracownicy) {
+			if (pracownik.getDzieci() > 0) {
+				suma += pracownik.getWiek();
+				osoba++;
+			}
+		}
+		System.out.println("średni wiek osob posiadających dzieci:" + suma / osoba);
 	}
 
 	public void glownaPetla() throws IOException {
 		petla: while (true) {
 			wypiszMenu();
 
-			int liczbaWybrana = skaner.nextInt();
+			String menuStr = skaner.nextLine();
+			int liczbaWybrana = Integer.parseInt(menuStr);
 
 			switch (liczbaWybrana) {
 			case 1:
@@ -168,6 +207,7 @@ public class MenuPracownikow {
 
 				break;
 			case 7:
+
 				edytujdodatkoweFunkcjeDlaPlikowTekstowych();
 
 				break;
@@ -189,7 +229,6 @@ public class MenuPracownikow {
 	}
 
 	public void dodajPracownika() {
-		skaner.nextLine();
 		System.out.println("podaj imie");
 		String imie = skaner.nextLine();
 		System.out.println("podaj nazwisko");
@@ -339,9 +378,20 @@ public class MenuPracownikow {
 	}
 
 	class NazwiskoCompare implements Comparator<Pracownik> {
+		boolean rosnaco;
+
+		public NazwiskoCompare(boolean rosnaco) {
+			this.rosnaco = rosnaco;
+		}
+
 		@Override
 		public int compare(Pracownik a1, Pracownik a2) {
-			return a1.getNazwisko().compareTo(a2.getNazwisko());
+			int wynik = a1.getNazwisko().toUpperCase().compareTo(a2.getNazwisko().toUpperCase());
+			if (rosnaco) {
+				return wynik;// wynik porownania, sortowanie rosnace
+			} else {
+				return -wynik;// wynik przeciwny porownania, sortowanie malejace
+			}
 		}
 	}
 
@@ -352,8 +402,8 @@ public class MenuPracownikow {
 		}
 	}
 
-	private void sortowaniePracownikowWgNazwiska() {
-		NazwiskoCompare nc = new NazwiskoCompare();
+	private void sortowaniePracownikowWgNazwiska(boolean rosnaco) {
+		NazwiskoCompare nc = new NazwiskoCompare(rosnaco);
 		Collections.sort(pracownicy, nc);
 
 	}

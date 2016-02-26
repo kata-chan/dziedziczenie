@@ -30,7 +30,7 @@ public class PlikiTekstowe3 {
 		// File plik = new File(nazwaPliku);
 		FileReader fileReader = new FileReader(nazwaPliku);
 		BufferedReader reader = new BufferedReader(fileReader);
-		FileWriter zapis = new FileWriter(nazwaPliku);
+		FileWriter zapis = new FileWriter(nazwaPliku, true);
 		Integer suma = new Integer(0);
 		int liczba = 0;
 		while (true) {
@@ -48,7 +48,7 @@ public class PlikiTekstowe3 {
 			}
 			suma = suma + 1;
 
-			zapis.append(suma);
+			zapis.write(suma.toString());
 		}
 		zapis.close();
 		reader.close();

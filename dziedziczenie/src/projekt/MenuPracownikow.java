@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 public class MenuPracownikow {
 
@@ -19,7 +20,7 @@ public class MenuPracownikow {
 	String nazwaPliku = "pracownicy.txt";
 	static Scanner skaner = new Scanner(System.in);
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, ProjektException {
 
 		MenuPracownikow mp = new MenuPracownikow();
 		String nazwa = "pracownicy.txt";
@@ -59,42 +60,42 @@ public class MenuPracownikow {
 		System.out.println("h - Sortowanie pracowników (w pliku) według nazwiska");
 		System.out.println("i - Sortowanie pracowników (w pliku) według wysokości ich pensji");
 
-		String literaWybrana = skaner.nextLine();
+		char literaWybrana = wczytajLitere('i');
 
 		switch (literaWybrana) {
-		case "a":
+		case 'a':
 			System.out.println("podaj wielkosc pensji");
 			float pensjaPorownywana = Float.parseFloat(skaner.nextLine());
 			ObliczanieLiczbyPracownikowZPensjaNieMniejszaNizPodanaPrzezUzytkownika(plik, pensjaPorownywana);
 			break;
-		case "b":
+		case 'b':
 			System.out.println("Podaj numer działu:");
 			int numerDzialu = Integer.parseInt(skaner.nextLine());
 			oblicznieSredniejPlacyWDziale(plik, numerDzialu);
 			break;
-		case "c":
+		case 'c':
 			najwyzszePensje(plik);
 			break;
-		case "d":
+		case 'd':
 			wszystkieDzialy(plik);
 			break;
-		case "e":
+		case 'e':
 			sredniaPlacyKDoM(plik);
 			break;
-		case "f":
+		case 'f':
 			podwyzki(plik);
 			break;
-		case "g":
+		case 'g':
 			System.out.println("podaj kwotę podwyżki");
 			float podwyzka = Float.parseFloat(skaner.nextLine());
 			zwiekszeniePensjiWszystkimPracownikomOPodanaKwote(plik, podwyzka);
 			break;
-		case "h":
+		case 'h':
 			System.out.println("Sortuj w kolejności (true - rosnąco, false - malejąco)");
 			boolean kolejnosc = Boolean.valueOf(skaner.nextLine());
 			sortowaniePracownikowWgNazwiska(plik, kolejnosc);
 			break;
-		case "i":
+		case 'i':
 			sortowaniePracownikowWgpensji(plik);
 			break;
 
@@ -207,53 +208,87 @@ public class MenuPracownikow {
 		System.out.println("średni wiek osob posiadających dzieci:" + suma / osoba);
 	}
 
-	public void glownaPetla() throws IOException {
-		petla: while (true) {
-			wypiszMenu();
-
+	public char wczytajLitere(char maks) {
+		while (true) {
 			String menuStr = skaner.nextLine();
-			int liczbaWybrana = Integer.parseInt(menuStr);
-
-			switch (liczbaWybrana) {
-			case 1:
-				wypisanieListyWszystkichPracownikow();
-				break;
-			case 2:
-				dodajPracownika();
-				break;
-			case 3:
-				eksport();
-				break;
-			case 4:
-				usunPracownika();
-				break;
-			case 5:
-				edycjaDanych();
-				break;
-			case 6:
-				dodatkoweFunkcje();
-
-				break;
-			case 7:
-
-				edytujdodatkoweFunkcjeDlaPlikowTekstowych();
-
-				break;
-			case 8:
-				informacjaOProgramie();
-				break;
-			case 9:
-				System.out.println("podaj własną nazwę pliku");
-				String nowaNazwa = skaner.nextLine();
-				wprowadzWlasnaNazwePliku(nowaNazwa);
-
-				break;
-			case 10:
-				break petla;
-
+			if (menuStr.length() > 0) {
+				char literaWybrana = menuStr.charAt(0);
+				if (literaWybrana >= 'a' && literaWybrana <= maks) {
+					return literaWybrana;
+				}
 			}
-
+			System.err.println("podaj literę z zakresu a-" + maks);
 		}
+	}
+
+	public int wczytajLiczbe(int maks) {
+		int liczbaWybrana;
+		while (true) {
+			try {
+				String menuStr = skaner.nextLine();
+				liczbaWybrana = Integer.parseInt(menuStr);
+				if (liczbaWybrana > 0 && liczbaWybrana <= maks) {
+					break;
+				} else {
+					System.err.println("Podaj liczbę z zakresu 1-" + maks);
+				}
+			} catch (NumberFormatException ex) {
+				System.err.println("Podaj liczbę z zakresu 1-" + maks);
+			}
+		}
+		return liczbaWybrana;
+
+	}
+
+	public void glownaPetla() {
+		petla: while (true) {
+			try {
+				wypiszMenu();
+
+				int liczbaWybrana = wczytajLiczbe(10);
+				switch (liczbaWybrana) {
+				case 1:
+					wypisanieListyWszystkichPracownikow();
+					break;
+				case 2:
+					dodajPracownika();
+					break;
+				case 3:
+					eksport();
+					break;
+				case 4:
+					usunPracownika();
+					break;
+				case 5:
+					edycjaDanych();
+					break;
+				case 6:
+					dodatkoweFunkcje();
+
+					break;
+				case 7:
+
+					edytujdodatkoweFunkcjeDlaPlikowTekstowych();
+
+					break;
+				case 8:
+					informacjaOProgramie();
+					break;
+				case 9:
+					System.out.println("podaj własną nazwę pliku");
+					String nowaNazwa = skaner.nextLine();
+					wprowadzWlasnaNazwePliku(nowaNazwa);
+
+					break;
+				case 10:
+					break petla;
+				}
+			} catch (Exception ex) {
+				System.err.println("Wystąpił błąd.Wiadomość błędu to " + ex.getMessage());
+				ex.printStackTrace();
+			}
+		}
+
 	}
 
 	public void dodajPracownika() {
@@ -336,7 +371,10 @@ public class MenuPracownikow {
 	}
 
 	public void eksport(String nazwaPliku, List<Pracownik> ludzie) throws IOException {
+		if (ludzie.isEmpty()) {
+			throw new RuntimeException("nie można wyeksportowac pustej listy");
 
+		}
 		File plik = new File(nazwaPliku);
 		FileWriter filewriter = new FileWriter(plik);
 		for (Pracownik pracownik : ludzie) {
@@ -478,7 +516,7 @@ public class MenuPracownikow {
 			pracownik.wyswietlDaneOPracowniku();
 		}
 		System.out.println("wybierz numer indeksu pracownika, którego chcesz usunąć");
-		int indeks = skaner.nextInt();
+		int indeks = wczytajLiczbe(pracownicy.size());
 		pracownicy.remove(indeks - 1);
 	}
 
@@ -523,7 +561,13 @@ public class MenuPracownikow {
 			}
 			mapaDzialow.get(pracownik.getNr_dzialu()).add(pracownik);
 		}
-		// for (Pracownik pracownik:pracownicy)
+		Set<Integer> numeryDzialow = mapaDzialow.keySet();
+		for (Integer numer : numeryDzialow) {
+			List<Pracownik> listaPracownikow = mapaDzialow.get(numer);
+			for (Pracownik pracownikDzialu : listaPracownikow) {
+				// dokonczyc
+			}
+		}
 
 	}
 

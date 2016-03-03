@@ -1,5 +1,3 @@
-BEGIN;
-
 CREATE TABLE czekoladki (
        IDCzekoladki CHAR(3) PRIMARY KEY,
        Nazwa VARCHAR(30) NOT NULL,
@@ -49,795 +47,849 @@ CREATE TABLE artykuly (
        PRIMARY KEY (IDZamowienia, IDPudelka)
 );
 
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (1, 'Hlasko Regina', 'Edwarda Bera 5', 'Elblag', '91-001', '111 222 111');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (2, 'Pikowski Stefan', 'Wolna 3', 'Krakow', '92-111', '012 111 11 11');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (3, 'Czarnkowska Dalia', 'Wolska 89', 'Ilawa', '11-373', '111 222 001');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (4, 'Wandziak Wojciech', 'Gregorowa 3', 'Warszawa', '10-001', '111 222 002');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (7, 'Wojak Alicja', 'Beringa 89', 'Wroclaw', '70-764', '111 222 003');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (8, 'Gorka Andrzej', 'Stefanowska 35', 'Gdansk', '11-788', '111 222 004');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (10, 'Moniak Antoni', 'Mlynska 34', 'Krakow', '91-001', '012 222 22 00');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (11, 'Sokol Robert', 'Akacjowa 3', 'Krakow', '92-111', '012 111 11 00');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (12, 'Witak Nina', 'Kasztanowa 23', 'Warszawa', '11-373', '022 888 88 00');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (13, 'Walendziak Jaroslaw', 'Krucza 12', 'Warszawa', '10-001', '022 888 88 01');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (14, 'Piotrowska Regina', 'Rzeczna 44', 'Borki', '74-013', '123 456 002');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (15, 'Miszak Stefan', 'Boczna 23/91', 'Pomiechowek', '70-764', '123 456 003');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (16, 'Sowa Dalia', 'Krucza 12/43', 'Warszawa', '11-788', '123 456 004');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (18, 'Wolski Wojciech', 'Edwarda Bera 5', 'Lubinek', '91-001', '123 456 005');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (19, 'Wojak Miroslaw', 'Akacjowa 3', 'Borki', '92-111', '777 001 001');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (21, 'Gorka Alicja', 'Wolna12/89', 'Katowice', '11-373', '777 001 002');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (22, 'Monski Andrzej', 'Towarowa 3', 'Krakow', '10-001', '777 001 003');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (24, 'Sokol Antoni', 'Prosta 345', 'Siedlce', '74-013', '777 001 004');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (25, 'Heronski Robert', 'Barstefska 89', 'Gdansk', '70-764', '777 001 005');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (26, 'Walendziak Tomasz', 'Rzeczna 4', 'Plock', '91-001', '777 001 006');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (27, 'Piotrowski Jaroslaw', 'Mlynska 34', 'Borki', '92-111', '777 001 007');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (28, 'Miszak Helena', 'Akacjowa 3', 'Krakow', '11-373', '012 555 00 11');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (29, 'Sowa Rafal', 'Kasztanowa 23', 'Siedlce', '10-001', '333 000 100');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (30, 'Wolska Regina', 'Krucza 12', 'Gdansk', '74-013', '333 000 101');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (31, 'Fisiak Stefan', 'Rzeczna 44', 'Pomiechowek', '70-764', '333 000 102');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (33, 'Wojak Dalia', 'Boczna 23/91', 'Krakow', '91-001', '333 000 103');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (34, 'Gorka Wojciech', 'Krucza 12/43', 'Siedlce', '92-111', '333 000 104');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (35, 'Moniak Miroslaw', 'Trakt 10', 'Gdansk', '11-373', '333 000 105');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (37, 'Sokol Alicja', 'Akacjowa 12/89', 'Borki', '10-001', '333 000 106');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (38, 'Helkowski Andrzej', 'Edwarda Bera 5', 'Katowice', '74-013', '333 000 107');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (39, 'Walendziak Antoni', 'Akacjowa 3', 'Krakow', '70-764', '012 111 11 55');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (40, 'Piotrowska Regina', 'Wolna12/89', 'Siedlce', '11-788', '787 345 012');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (42, 'Wojak Stefan', 'Towarowa 3', 'Gdansk', '79-408', '787 345 013');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (43, 'Gorka Dalia', 'Prosta 345', 'Dolowe', '19-047', '787 345 014');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (44, 'Moniak Wojciech', 'Beringa 89', 'Pomiechowek', '91-001', '787 345 015');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (46, 'Sokol Miroslaw', 'Rzeczna 4', 'Borki', '92-111', '787 345 016');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (47, 'Hern Alicja', 'Mlynska 34', 'Doly', '11-373', '787 345 017');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (48, 'Walendziak Andrzej', 'Akacjowa 3', 'Krakow', '10-001', '787 345 018');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (49, 'Piotrowski Antoni', 'Kasztanowa 23', 'Kownik', '74-013', '232 777 900');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (50, 'Miszak Robert', 'Krucza 12', 'Katowice', '70-764', '232 777 901');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (51, 'Sowa Tomasz', 'Edwarda Bera 5', 'Siedlce', '11-788', '232 777 902');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (52, 'Wolski Jaroslaw', 'Akacjowa 3', 'Sopot', '91-001', '232 777 903');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (53, 'Fisiak Helena', 'Wolna12/89', 'Pomiechowek', '92-111', '232 777 904');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (54, 'Fisiak Regina', 'Towarowa 3', 'Krakow', '11-373', '232 777 905');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (55, 'Wojak Stefan', 'Prosta 345', 'Siedlce', '10-001', '232 777 906');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (56, 'Gorka Dalia', 'Beringa 89', 'Gdansk', '74-013', '232 777 907');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (57, 'Moniak Wojciech', 'Rzeczna 4', 'Pomiechowek', '70-764', '232 777 908');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (58, 'Sokol Miroslaw', 'Mlynska 34', 'Pomiechowek', '11-788', '232 777 909');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (59, 'Herron Alicja', 'Akacjowa 3', 'Wicie', '79-408', '564 345 303');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (62, 'Walendziak Andrzej', 'Kasztanowa 23', 'Siedlce', '91-001', '564 345 304');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (63, 'Piotrowski Antoni', 'Krucza 12', 'Krakow', '92-111', '012 334 44 56');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (64, 'Wojak Robert', 'Rzeczna 44', 'Siedlce', '11-373', '564 345 305');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (66, 'Gorka Tomasz', 'Boczna 23/91', 'Gdansk', '10-001', '564 345 306');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (67, 'Moniak Jaroslaw', 'Edwarda Bera 5', 'Michow', '74-013', '564 345 307');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (68, 'Witak Nina', 'Akacjowa 3', 'Siedlce', '70-764', '564 345 308');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (69, 'Herron Stefan', 'Wolna12/89', 'Gdansk', '11-788', '564 345 309');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (70, 'Walendziak Dalia', 'Towarowa 3', 'Tarnow', '79-408', '564 345 312');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (71, 'Piotrowski Wojciech', 'Prosta 345', 'Krakow', '19-047', '012 334 44 57');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (73, 'Miszak Miroslaw', 'Beringa 89', 'Plock', '81-230', '746 006 020');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (74, 'Sowa Alicja', 'Rzeczna 4', 'Siedlce', '91-001', '746 006 021');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (76, 'Wolski Andrzej', 'Mlynska 34', 'Sokolka', '92-111', '746 006 022');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (79, 'Fisiak Antoni', 'Akacjowa 3', 'Konstancin', '11-373', '746 006 023');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (80, 'Wyga Robert', 'Kasztanowa 23', 'Plock', '10-001', '746 006 024');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (82, 'Fisiak Tomasz', 'Krucza 12', 'Katowice', '74-013', '746 006 025');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (84, 'Wojak Jaroslaw', 'Rzeczna 44', 'Ludwiki', '70-764', '746 006 026');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (85, 'Gorka Helena', 'Boczna 23/91', 'Regina', '11-788', '746 006 027');
+INSERT INTO klienci(idklienta, nazwa, ulica, miejscowosc, kod, telefon) VALUES (86, 'Moniak Rafal', 'Krucza 12/43', 'Krakow', '79-408', '012 334 44 58');
+
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (1, 2, '2008-10-30');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (3, 57, '2008-10-30');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (4, 58, '2008-10-31');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (5, 12, '2008-10-31');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (6, 1, '2008-11-02');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (7, 33, '2008-11-02');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (8, 4, '2008-11-02');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (9, 86, '2008-11-05');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (10, 54, '2008-11-06');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (11, 11, '2008-11-07');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (12, 4, '2008-11-08');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (13, 53, '2008-11-09');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (14, 59, '2008-11-09');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (15, 62, '2008-11-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (16, 12, '2008-11-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (17, 86, '2008-11-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (18, 4, '2008-11-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (19, 38, '2008-11-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (20, 71, '2008-11-13');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (22, 73, '2008-11-14');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (23, 2, '2008-11-15');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (24, 63, '2008-11-16');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (25, 64, '2008-11-16');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (26, 4, '2008-11-17');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (27, 86, '2008-11-17');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (28, 54, '2008-11-17');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (29, 74, '2008-11-18');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (30, 76, '2008-11-19');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (31, 3, '2008-11-19');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (32, 54, '2008-11-20');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (33, 43, '2008-11-21');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (34, 44, '2008-11-22');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (35, 46, '2008-11-23');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (36, 12, '2008-11-24');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (37, 26, '2008-11-24');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (38, 31, '2008-11-25');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (39, 26, '2008-11-25');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (40, 55, '2008-11-25');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (41, 86, '2008-11-26');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (42, 7, '2008-11-26');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (43, 40, '2008-11-26');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (44, 82, '2008-11-27');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (45, 28, '2008-11-27');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (46, 29, '2008-11-27');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (47, 30, '2008-11-27');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (49, 3, '2008-12-05');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (50, 28, '2008-12-05');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (51, 2, '2008-12-06');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (52, 26, '2008-12-06');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (53, 39, '2008-12-06');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (54, 73, '2008-12-06');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (55, 54, '2008-12-06');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (56, 35, '2008-12-06');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (57, 2, '2008-12-06');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (58, 79, '2008-12-07');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (59, 80, '2008-12-07');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (60, 82, '2008-12-07');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (61, 66, '2008-12-07');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (62, 67, '2008-12-07');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (63, 49, '2008-12-07');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (64, 82, '2008-12-07');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (65, 68, '2008-12-08');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (66, 69, '2008-12-08');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (67, 70, '2008-12-08');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (68, 63, '2008-12-08');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (69, 35, '2008-12-08');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (70, 49, '2008-12-08');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (71, 8, '2008-12-08');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (72, 10, '2008-12-09');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (73, 11, '2008-12-09');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (74, 12, '2008-12-09');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (75, 13, '2008-12-09');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (76, 11, '2008-12-09');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (77, 14, '2008-12-09');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (78, 21, '2008-12-09');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (79, 7, '2008-12-10');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (80, 28, '2008-12-10');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (81, 29, '2008-12-10');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (82, 30, '2008-12-10');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (83, 14, '2008-12-10');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (84, 15, '2008-12-10');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (85, 16, '2008-12-10');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (86, 18, '2008-12-11');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (87, 73, '2008-12-11');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (88, 14, '2008-12-11');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (89, 15, '2008-12-11');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (90, 16, '2008-12-11');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (91, 18, '2008-12-11');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (92, 19, '2008-12-11');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (93, 21, '2008-12-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (94, 22, '2008-12-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (95, 24, '2008-12-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (96, 49, '2008-12-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (97, 3, '2008-12-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (98, 25, '2008-12-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (99, 26, '2008-12-12');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (100, 27, '2008-12-13');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (101, 4, '2008-12-13');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (102, 28, '2008-12-13');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (103, 29, '2008-12-13');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (104, 30, '2008-12-13');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (105, 31, '2008-12-13');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (106, 53, '2008-12-13');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (107, 84, '2008-12-14');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (108, 79, '2008-12-14');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (109, 33, '2008-12-14');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (110, 34, '2008-12-14');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (111, 35, '2008-12-14');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (112, 56, '2008-12-14');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (113, 1, '2008-12-14');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (114, 1, '2008-12-15');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (115, 37, '2008-12-15');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (116, 38, '2008-12-15');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (117, 39, '2008-12-15');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (118, 40, '2008-12-15');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (119, 42, '2008-12-15');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (120, 43, '2008-12-15');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (121, 44, '2008-12-16');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (122, 63, '2008-12-16');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (123, 73, '2008-12-16');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (124, 28, '2008-12-16');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (125, 63, '2008-12-16');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (126, 44, '2008-12-16');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (127, 46, '2008-12-16');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (128, 47, '2008-12-17');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (129, 48, '2008-12-17');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (130, 49, '2008-12-17');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (131, 84, '2008-12-17');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (132, 85, '2008-12-17');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (133, 56, '2008-12-17');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (134, 79, '2008-12-17');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (136, 73, '2008-12-18');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (137, 73, '2008-12-18');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (138, 44, '2008-12-18');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (139, 11, '2008-12-18');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (140, 86, '2008-12-18');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (141, 4, '2008-12-18');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (142, 50, '2008-12-19');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (143, 51, '2008-12-19');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (144, 52, '2008-12-19');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (145, 16, '2008-12-19');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (146, 25, '2008-12-19');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (147, 53, '2008-12-19');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (148, 54, '2008-12-19');
+INSERT INTO zamowienia(idzamowienia, idklienta, datarealizacji) VALUES (149, 55, '2008-12-20');
 
 
-COPY klienci FROM 'klienci.sql' NULL '';
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('B01', 'Plomienna ekstaza', 'Gorzka', 'Luskane', 'Krem', 'Orzechy w kremie, zatopione w gorzkiej czekoladzie.', 0.30, 20);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('B02', 'Gorzka jagodowa', 'Gorzka', '', 'Jagody', 'Smakowite gorskie jagody w czekoladzie.', 0.25, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('B03', 'Marcepanowe listki', 'Gorzka', '', 'Marcepan', 'Marcepany w ksztalcie lisci debu oblewane gorzka czekolada.', 0.40, 12);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('B04', 'Gorzka truskawkowa', 'Gorzka', '', 'Truskawki', 'Truskawki w gorzkiej czekoladzie, wysmienite.', 0.23, 20);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('B05', 'Gorzka malinowa', 'Gorzka', '', 'Maliny', 'Maliny zrywane na bezludnych wyspach, w polewie czekoladowej.', 0.25, 20);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('B06', 'Gorzka z marmolada', 'Gorzka', '', 'Marmolada', 'Marmolada w polewie czekoladowej - prawdziwie brytyjski smakolyk.', 0.17, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('B07', 'Gorzka z wisniami', 'Gorzka', '', 'Wisnie', 'Ulubione wisnie krolowej Anny zatopione w czekoladzie.', 0.26, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('B08', 'Gorzkie orzechy', 'Gorzka', 'Laskowe', '', 'Orzechy laskowe w czekoladzie.', 0.24, 20);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('D01', 'Migdalowy smak', 'Ciemna', 'Migdaly', '', 'Cale migdaly, recznie topione w czekoladzie.', 0.30, 15);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('D02', 'Serce na dloni', 'Ciemna', '', 'Krem wisniowy', 'Ciemna czekolada o sercu z kremu wisniowego.', 0.32, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('D03', 'Potega orzechow', 'Ciemna', 'Luskane', '', 'Ogromne orzechy recznie umieszczane w czekoladzie.', 0.30, 15);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('D04', 'Migdalowa ambrozja', 'Ciemna', 'Migdaly', 'Amaretto', 'Migdaly zatapiane w amaretto.', 0.44, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('D06', 'Smak orzechow laskowych', 'Ciemna', 'Laskowe', '', 'Cale orzechy laskowe, recznie topione w czekoladzie.', 0.21, 10);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('D07', 'Wisniowa klasyczna', 'Ciemna', '', 'Wisnie', 'Wisnie w czekoladzie.', 0.28, 24);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('D08', 'Czekoladowe kiwi', 'Ciemna', 'Brazylijskie', '', 'Orzechy brazylijskie na czekoladzie tworzace wspaniala kompozycje wzorowana na owocu kiwi.', 0.29, 30);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('D09', 'Amerykanska pieknosc', 'Ciemna', '', '', 'Twarda czekolada w ksztalcie amerykanskich pieknosci.', 0.24, 30);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('D11', 'Marcepanowe delicje', 'Ciemna', '', 'Marcepan', 'Smakowity marcepan w gorzkiej czekoladzie.', 0.38, 30);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('F01', 'Twarda kremowa wloska', 'Twarda', 'Wloskie', 'Krem', 'Slodziutki krem z orzechami wloskimi.', 0.19, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('F02', 'Twarda kremowa pistacjowa', 'Twarda', 'Pistacjowe', 'Krem', 'Slodziutki krem z orzechami pistacjowymi.', 0.21, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M01', 'Slodkie truskawki', 'Mleczna', '', 'Truskawki', 'Truskawki oblewane mleczna czekolada.', 0.20, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M02', 'Smak macadamia', 'Mleczna', 'Macadamia', '', 'Cale macadamia, recznie umieszczane w mlecznej czekoladzie.', 0.40, 20);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M03', 'Smak pistacji', 'Mleczna', 'Pistacjowe', '', 'Cale pistacjowe orzechy, recznie umieszczane w mlecznej czekoladzie.', 0.30, 12);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M04', 'Rozkosz kremu orzechowego', 'Mleczna', '', 'Krem orzechowy', 'Delikatny krem orzechowy robiony z senegalskich orzeszkow w mlecznej czekoladzie.', 0.21, 12);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M05', 'Marcepanki', 'Mleczna', '', 'Marcepan', 'Marcepan oblewany mleczna czekolada.', 0.32, 35);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M06', 'Serce kochanka', 'Mleczna', '', 'Krem wisniowy', 'Czekoladki mlaczne w ksztalcie serc z nadzieniem wisniowym.', 0.25, 35);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M07', 'Jablkowe amory', 'Mleczna', 'Migdaly', '', 'Mleczne czekoladki w ksztalcie jabluszek z listkami z migdalow.', 0.24, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M08', 'Marcepanowy klon', 'Mleczna', '', 'Marcepan', 'Marcepan w ksztalcie listkow klonu z mleczna czekolada.', 0.37, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M09', 'Slodkie maliny', 'Mleczna', '', 'Maliny', 'Maliny oblewane mleczna czekolada.', 0.26, 15);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M10', 'Niezapominajki', 'Mleczna', '', 'Jagody', 'Niezapomniana mleczna czekolada nadziewana jagodami.', 0.19, 15);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M11', 'Slodkie wisnie', 'Twarda', '', 'Wisnie', 'Wisnie w polewie z mlecznej czekolady.', 0.27, 20);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M12', 'Slodkie jagody', 'Mleczna', '', 'Jagody', 'Jagody osladzane mleczna czekolada.', 0.25, 20);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M13', 'Slodka marmolada', 'Mleczna', '', 'Marmolada', 'Mleczna czekolada z nadzieniem z pomaranczowej marmolady.', 0.18, 30);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M14', 'Wisnie z orzechami', 'Mleczna', 'Laskowe', 'Krem wisniowy', 'Swietne orzechy laskowe przykryte kremem wisniowym i mleczna czekolada.', 0.26, 30);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M15', 'Tropikalna palma', 'Mleczna', '', 'Kokosy', 'Palma z mlecznej czekolady z kokosami.', 0.23, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M16', 'Cud marcepanu', 'Mleczna', '', 'Marcepan', 'Marcepan w ksztalcie migdalow z czekoladowym "Mniam mniam".', 0.33, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M17', 'Amaretto z orzechali', 'Mleczna', 'Laskowe', 'Amaretto', 'Orzechy laskowe z amaretto oblewane mleczna czekolada.', 0.36, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('M18', 'Orzechy w kremie', 'Mleczna', 'Laskowe', 'Krem', 'Orzechy laskowe z kremem oblewane mleczna czekolada.', 0.33, 20);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('W01', 'Marcepanowa jaskolka', 'Biala', '', 'Marcepan', 'Marcepanowe jaskolki o skrzydlach z mlecznej czekolady.', 0.34, 20);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('W02', 'Biale lilie', 'Biala', '', '', 'Elegancka biala czekolada formowana w ksztalcie lilii.', 0.27, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('W03', 'Zlamane serce', 'Biala', 'Pekan', '', 'Dwie polowki pekanowego serca z bialej czekolady.', 0.30, 25);
+INSERT INTO czekoladki(idczekoladki, nazwa, rodzajczekolady, rodzajorzechow, rodzajnadzienia, opis, koszt, masa) VALUES ('W06', 'Smak Brazylii', 'Biala', 'Brazylijskie', '', 'Brazylijskie orzechy, recznie umieszczane w bialej czekoladzie.', 0.28, 35);
 
 
-COPY zamowienia FROM STDIN NULL '';
-1	2	2008-10-30
-3	57	2008-10-30
-4	58	2008-10-31
-5	12	2008-10-31
-6	1	2008-11-02
-7	33	2008-11-02
-8	4	2008-11-02
-9	86	2008-11-05
-10	54	2008-11-06
-11	11	2008-11-07
-12	4	2008-11-08
-13	53	2008-11-09
-14	59	2008-11-09
-15	62	2008-11-12
-16	12	2008-11-12
-17	86	2008-11-12
-18	4	2008-11-12
-19	38	2008-11-12
-20	71	2008-11-13
-22	73	2008-11-14
-23	2	2008-11-15
-24	63	2008-11-16
-25	64	2008-11-16
-26	4	2008-11-17
-27	86	2008-11-17
-28	54	2008-11-17
-29	74	2008-11-18
-30	76	2008-11-19
-31	3	2008-11-19
-32	54	2008-11-20
-33	43	2008-11-21
-34	44	2008-11-22
-35	46	2008-11-23
-36	12	2008-11-24
-37	26	2008-11-24
-38	31	2008-11-25
-39	26	2008-11-25
-40	55	2008-11-25
-41	86	2008-11-26
-42	7	2008-11-26
-43	40	2008-11-26
-44	82	2008-11-27
-45	28	2008-11-27
-46	29	2008-11-27
-47	30	2008-11-27
-49	3	2008-12-05
-50	28	2008-12-05
-51	2	2008-12-06
-52	26	2008-12-06
-53	39	2008-12-06
-54	73	2008-12-06
-55	54	2008-12-06
-56	35	2008-12-06
-57	2	2008-12-06
-58	79	2008-12-07
-59	80	2008-12-07
-60	82	2008-12-07
-61	66	2008-12-07
-62	67	2008-12-07
-63	49	2008-12-07
-64	82	2008-12-07
-65	68	2008-12-08
-66	69	2008-12-08
-67	70	2008-12-08
-68	63	2008-12-08
-69	35	2008-12-08
-70	49	2008-12-08
-71	8	2008-12-08
-72	10	2008-12-09
-73	11	2008-12-09
-74	12	2008-12-09
-75	13	2008-12-09
-76	11	2008-12-09
-77	14	2008-12-09
-78	21	2008-12-09
-79	7	2008-12-10
-80	28	2008-12-10
-81	29	2008-12-10
-82	30	2008-12-10
-83	14	2008-12-10
-84	15	2008-12-10
-85	16	2008-12-10
-86	18	2008-12-11
-87	73	2008-12-11
-88	14	2008-12-11
-89	15	2008-12-11
-90	16	2008-12-11
-91	18	2008-12-11
-92	19	2008-12-11
-93	21	2008-12-12
-94	22	2008-12-12
-95	24	2008-12-12
-96	49	2008-12-12
-97	3	2008-12-12
-98	25	2008-12-12
-99	26	2008-12-12
-100	27	2008-12-13
-101	4	2008-12-13
-102	28	2008-12-13
-103	29	2008-12-13
-104	30	2008-12-13
-105	31	2008-12-13
-106	53	2008-12-13
-107	84	2008-12-14
-108	79	2008-12-14
-109	33	2008-12-14
-110	34	2008-12-14
-111	35	2008-12-14
-112	56	2008-12-14
-113	1	2008-12-14
-114	1	2008-12-15
-115	37	2008-12-15
-116	38	2008-12-15
-117	39	2008-12-15
-118	40	2008-12-15
-119	42	2008-12-15
-120	43	2008-12-15
-121	44	2008-12-16
-122	63	2008-12-16
-123	73	2008-12-16
-124	28	2008-12-16
-125	63	2008-12-16
-126	44	2008-12-16
-127	46	2008-12-16
-128	47	2008-12-17
-129	48	2008-12-17
-130	49	2008-12-17
-131	84	2008-12-17
-132	85	2008-12-17
-133	56	2008-12-17
-134	79	2008-12-17
-136	73	2008-12-18
-137	73	2008-12-18
-138	44	2008-12-18
-139	11	2008-12-18
-140	86	2008-12-18
-141	4	2008-12-18
-142	50	2008-12-19
-143	51	2008-12-19
-144	52	2008-12-19
-145	16	2008-12-19
-146	25	2008-12-19
-147	53	2008-12-19
-148	54	2008-12-19
-149	55	2008-12-20
-\.
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('ALLS', 'Pory roku', 'Jagody, truskawki i maliny, wszystkie slodziutkie i smaczne.', 14.00, 700);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('ALPI', 'Kolekcja alpejska', 'Alpejskie jagody i maliny w naszej najlepszej czekoladzie.', 20.00, 400);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('AUTU', 'Kolekcja jesienna', 'Rodzinne pudelko czekoladek, na jesienne wieczory.', 43.00, 200);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('BITT', 'Gorzkie czekoladki', 'Nasza gorzka czekolada z jagodami, wisniami, marmolada, malinami i truskawkami.', 27.70, 200);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('CHER', 'Klasyczne wisnie', 'Cale wisnie w czekoladzie, klasyczne i slodkie.', 16.20, 500);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('FUDG', 'Kremowa fantazja', 'Kolekcja czekoladek kremowych - jak senne marzenie.', 18.00, 400);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('HEAV', 'Niebianskie orzechy', 'Najlepsze orzechy w orzechowych czekoladkach.', 15.00, 300);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('INTE', 'Miedzynarodowe', 'Miedzynarodowy zestaw czekoladek zawierajacy czekoladki: Amerykanska pieknosc, Smak Brazylii i Czekoladowe kiwi.', 34.00, 500);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('ISLA', 'Islandzka kolekcja', 'Delikatesy ktore zabiora Cie na bezludna wyspe, czekoladki: Czekoladowe kiwi, Biale lilie i Tropikalna palma.', 35.00, 400);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('LOVE', 'Serca kochankow', 'Najlepsze czekoladki mleczne w sercowej kolekcji, takie jak:amane serce, Serce kochanka i Serce na dloni.', 17.50, 300);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('MARZ', 'Marcepanowy cud', 'Swietny zestaw marcepanowych czekoladek.', 32.20, 500);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('NORT', 'Kolekcja polnocna', 'Szczegolna kolekcja czekoladek dla kochankow, takich jak: Marcepanowy klon, Marcepanowa jaskolka i  Niezapominajki.', 32.20, 700);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('PACI', 'Obfitosc Pacyfiku', 'Najwykwintniejszy zestaw czekoladek Pacyfiku: Biale lilie, Amaletto z orzechami i Orzechy w kremie.', 21.00, 500);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('PEAN', 'Kremowe delikatesy', 'Oblewana czekolada masa kremowa, smakujaca wszystkim.', 19.00, 900);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('ROMA', 'Kolekcja romantyczna', 'Nasz klasyczny i romantyczny wybor czekoladek: Migdalowa ambrozja, Plomienna ekstaza, Amerykanska pieknosc i Jablkowe amory.', 34.00, 700);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('SUPR', 'Smaki', 'Smaki wybranych orzechow oblewanych czekolada.', 18.00, 400);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('SWE2', 'Slodkie kremowe', 'Smakowite kremy dla wszystkich ktorzy uwielbiaja nadzienie kremowe.', 23.00, 200);
+INSERT INTO pudelka(idpudelka, nazwa, opis, cena, stan) VALUES ('SWEE', 'Mieszanka czekoladowa', 'Nasza najlepsza mieszanka owocow w czekoladzie.', 27.00, 300);
 
-COPY czekoladki FROM STDIN NULL '';
-B01	Plomienna ekstaza	Gorzka	Luskane	Krem	Orzechy w kremie, zatopione w gorzkiej czekoladzie.	0.30	20
-B02	Gorzka jagodowa	Gorzka		Jagody	Smakowite gorskie jagody w czekoladzie.	0.25	25
-B03	Marcepanowe listki	Gorzka		Marcepan	Marcepany w ksztalcie lisci debu oblewane gorzka czekolada.	0.40	12
-B04	Gorzka truskawkowa	Gorzka		Truskawki	Truskawki w gorzkiej czekoladzie, wysmienite.	0.23	20
-B05	Gorzka malinowa	Gorzka		Maliny	Maliny zrywane na bezludnych wyspach, w polewie czekoladowej.	0.25	20
-B06	Gorzka z marmolada	Gorzka		Marmolada	Marmolada w polewie czekoladowej - prawdziwie brytyjski smakolyk.	0.17	25
-B07	Gorzka z wisniami	Gorzka		Wisnie	Ulubione wisnie krolowej Anny zatopione w czekoladzie.	0.26	25
-B08	Gorzkie orzechy	Gorzka	Laskowe		Orzechy laskowe w czekoladzie.	0.24	20
-D01	Migdalowy smak	Ciemna	Migdaly		Cale migdaly, recznie topione w czekoladzie.	0.30	15
-D02	Serce na dloni	Ciemna		Krem wisniowy	Ciemna czekolada o sercu z kremu wisniowego.	0.32	25
-D03	Potega orzechow	Ciemna	Luskane		Ogromne orzechy recznie umieszczane w czekoladzie.	0.30	15
-D04	Migdalowa ambrozja	Ciemna	Migdaly	Amaretto	Migdaly zatapiane w amaretto.	0.44	25
-D06	Smak orzechow laskowych	Ciemna	Laskowe		Cale orzechy laskowe, recznie topione w czekoladzie.	0.21	10
-D07	Wisniowa klasyczna	Ciemna		Wisnie	Wisnie w czekoladzie.	0.28	24
-D08	Czekoladowe kiwi	Ciemna	Brazylijskie		Orzechy brazylijskie na czekoladzie tworzace wspaniala kompozycje wzorowana na owocu kiwi.	0.29	30
-D09	Amerykanska pieknosc	Ciemna			Twarda czekolada w ksztalcie amerykanskich pieknosci.	0.24	30
-D11	Marcepanowe delicje	Ciemna		Marcepan	Smakowity marcepan w gorzkiej czekoladzie.	0.38	30
-F01	Twarda kremowa wloska	Twarda	Wloskie	Krem	Slodziutki krem z orzechami wloskimi.	0.19	25
-F02	Twarda kremowa pistacjowa	Twarda	Pistacjowe	Krem	Slodziutki krem z orzechami pistacjowymi.	0.21	25
-M01	Slodkie truskawki	Mleczna		Truskawki	Truskawki oblewane mleczna czekolada.	0.20	25
-M02	Smak macadamia	Mleczna	Macadamia		Cale macadamia, recznie umieszczane w mlecznej czekoladzie.	0.40	20
-M03	Smak pistacji	Mleczna	Pistacjowe		Cale pistacjowe orzechy, recznie umieszczane w mlecznej czekoladzie.	0.30	12
-M04	Rozkosz kremu orzechowego	Mleczna		Krem orzechowy	Delikatny krem orzechowy robiony z senegalskich orzeszkow w mlecznej czekoladzie.	0.21	12
-M05	Marcepanki	Mleczna		Marcepan	Marcepan oblewany mleczna czekolada.	0.32	35
-M06	Serce kochanka	Mleczna		Krem wisniowy	Czekoladki mlaczne w ksztalcie serc z nadzieniem wisniowym.	0.25	35
-M07	Jablkowe amory	Mleczna	Migdaly		Mleczne czekoladki w ksztalcie jabluszek z listkami z migdalow.	0.24	25
-M08	Marcepanowy klon	Mleczna		Marcepan	Marcepan w ksztalcie listkow klonu z mleczna czekolada.	0.37	25
-M09	Slodkie maliny	Mleczna		Maliny	Maliny oblewane mleczna czekolada.	0.26	15
-M10	Niezapominajki	Mleczna		Jagody	Niezapomniana mleczna czekolada nadziewana jagodami.	0.19	15
-M11	Slodkie wisnie	Twarda		Wisnie	Wisnie w polewie z mlecznej czekolady.	0.27	20
-M12	Slodkie jagody	Mleczna		Jagody	Jagody osladzane mleczna czekolada.	0.25	20
-M13	Slodka marmolada	Mleczna		Marmolada	Mleczna czekolada z nadzieniem z pomaranczowej marmolady.	0.18	30
-M14	Wisnie z orzechami	Mleczna	Laskowe	Krem wisniowy	Swietne orzechy laskowe przykryte kremem wisniowym i mleczna czekolada.	0.26	30
-M15	Tropikalna palma	Mleczna		Kokosy	Palma z mlecznej czekolady z kokosami.	0.23	25
-M16	Cud marcepanu	Mleczna		Marcepan	Marcepan w ksztalcie migdalow z czekoladowym "Mniam mniam".	0.33	25
-M17	Amaretto z orzechali	Mleczna	Laskowe	Amaretto	Orzechy laskowe z amaretto oblewane mleczna czekolada.	0.36	25
-M18	Orzechy w kremie	Mleczna	Laskowe	Krem	Orzechy laskowe z kremem oblewane mleczna czekolada.	0.33	20
-W01	Marcepanowa jaskolka	Biala		Marcepan	Marcepanowe jaskolki o skrzydlach z mlecznej czekolady.	0.34	20
-W02	Biale lilie	Biala			Elegancka biala czekolada formowana w ksztalcie lilii.	0.27	25
-W03	Zlamane serce	Biala	Pekan		Dwie polowki pekanowego serca z bialej czekolady.	0.30	25
-W06	Smak Brazylii	Biala	Brazylijskie		Brazylijskie orzechy, recznie umieszczane w bialej czekoladzie.	0.28	35
-\.
 
-COPY pudelka FROM STDIN NULL '';
-ALLS	Pory roku	Jagody, truskawki i maliny, wszystkie slodziutkie i smaczne.	14.00	700
-ALPI	Kolekcja alpejska	Alpejskie jagody i maliny w naszej najlepszej czekoladzie.	20.00	400
-AUTU	Kolekcja jesienna	Rodzinne pudelko czekoladek, na jesienne wieczory.	43.00	200
-BITT	Gorzkie czekoladki	Nasza gorzka czekolada z jagodami, wisniami, marmolada, malinami i truskawkami.	27.70	200
-CHER	Klasyczne wisnie	Cale wisnie w czekoladzie, klasyczne i slodkie.	16.20	500
-FUDG	Kremowa fantazja	Kolekcja czekoladek kremowych - jak senne marzenie.	18.00	400
-HEAV	Niebianskie orzechy	Najlepsze orzechy w orzechowych czekoladkach.	15.00	300
-INTE	Miedzynarodowe	Miedzynarodowy zestaw czekoladek zawierajacy czekoladki: Amerykanska pieknosc, Smak Brazylii i Czekoladowe kiwi.	34.00	500
-ISLA	Islandzka kolekcja	Delikatesy ktore zabiora Cie na bezludna wyspe, czekoladki: Czekoladowe kiwi, Biale lilie i Tropikalna palma.	35.00	400
-LOVE	Serca kochankow	Najlepsze czekoladki mleczne w sercowej kolekcji, takie jak:amane serce, Serce kochanka i Serce na dloni.	17.50	300
-MARZ	Marcepanowy cud	Swietny zestaw marcepanowych czekoladek.	32.20	500
-NORT	Kolekcja polnocna	Szczegolna kolekcja czekoladek dla kochankow, takich jak: Marcepanowy klon, Marcepanowa jaskolka i  Niezapominajki.	32.20	700
-PACI	Obfitosc Pacyfiku	Najwykwintniejszy zestaw czekoladek Pacyfiku: Biale lilie, Amaletto z orzechami i Orzechy w kremie.	21.00	500
-PEAN	Kremowe delikatesy	Oblewana czekolada masa kremowa, smakujaca wszystkim.	19.00	900
-ROMA	Kolekcja romantyczna	Nasz klasyczny i romantyczny wybor czekoladek: Migdalowa ambrozja, Plomienna ekstaza, Amerykanska pieknosc i Jablkowe amory.	34.00	700
-SUPR	Smaki	Smaki wybranych orzechow oblewanych czekolada.	18.00	400
-SWE2	Slodkie kremowe	Smakowite kremy dla wszystkich ktorzy uwielbiaja nadzienie kremowe.	23.00	200
-SWEE	Mieszanka czekoladowa	Nasza najlepsza mieszanka owocow w czekoladzie.	27.00	300
-\.
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ALLS', 'B02', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ALLS', 'B04', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ALLS', 'B05', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ALLS', 'M01', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ALLS', 'M09', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ALLS', 'M12', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ALPI', 'M12', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ALPI', 'B04', 5);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ALPI', 'M01', 5);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ALPI', 'B02', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('AUTU', 'M05', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('AUTU', 'B03', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('AUTU', 'W01', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('AUTU', 'M08', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('BITT', 'B07', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('BITT', 'B04', 5);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('BITT', 'B05', 5);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('BITT', 'B06', 5);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('BITT', 'B02', 5);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('CHER', 'B07', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('CHER', 'M11', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('CHER', 'D07', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('FUDG', 'F01', 9);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('FUDG', 'B03', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('FUDG', 'F02', 9);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('FUDG', 'B05', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('FUDG', 'B04', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('HEAV', 'M14', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('HEAV', 'D06', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('HEAV', 'M16', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('HEAV', 'B08', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('HEAV', 'M15', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('INTE', 'D08', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('INTE', 'D09', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('INTE', 'W06', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('INTE', 'M05', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ISLA', 'M08', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ISLA', 'D08', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ISLA', 'M15', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ISLA', 'W02', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('LOVE', 'D02', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('LOVE', 'M06', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('LOVE', 'W03', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('MARZ', 'M08', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('MARZ', 'M05', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('MARZ', 'D11', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('MARZ', 'B03', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('MARZ', 'W01', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('MARZ', 'M16', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('NORT', 'B05', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('NORT', 'D09', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('NORT', 'M05', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('NORT', 'M10', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('NORT', 'W01', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('NORT', 'W02', 4);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('PACI', 'M18', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('PACI', 'M17', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('PACI', 'D04', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('PACI', 'W02', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('PEAN', 'M04', 18);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ROMA', 'B02', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ROMA', 'D04', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ROMA', 'D02', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ROMA', 'D09', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ROMA', 'M06', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ROMA', 'M07', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ROMA', 'M10', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('ROMA', 'W03', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SUPR', 'D06', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SUPR', 'D03', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SUPR', 'D01', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SUPR', 'M02', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SUPR', 'M03', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SUPR', 'W06', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWE2', 'B04', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWE2', 'M06', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWE2', 'M04', 6);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWEE', 'B07', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWEE', 'B06', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWEE', 'B04', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWEE', 'B02', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWEE', 'B05', 3);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWEE', 'M01', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWEE', 'M13', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWEE', 'M12', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWEE', 'M11', 2);
+INSERT INTO zawartosc(idpudelka, idczekoladki, sztuk)    VALUES ('SWEE', 'M09', 2);
 
-COPY artykuly FROM STDIN NULL '';
-1	PEAN	2
-3	ALPI	1
-3	LOVE	2
-3	CHER	2
-3	NORT	1
-4	AUTU	1
-4	BITT	2
-4	PACI	1
-5	AUTU	2
-5	BITT	2
-5	FUDG	1
-5	ISLA	1
-6	BITT	1
-6	FUDG	1
-6	HEAV	2
-6	NORT	2
-6	PEAN	1
-6	SWEE	2
-7	PEAN	1
-8	FUDG	1
-8	MARZ	2
-9	NORT	2
-9	PACI	1
-10	PACI	1
-10	SWEE	2
-11	BITT	1
-11	HEAV	2
-11	PEAN	1
-11	SUPR	2
-11	SWEE	1
-12	ALPI	2
-12	FUDG	2
-12	ROMA	1
-12	SWE2	1
-12	SWEE	1
-13	SWEE	2
-14	HEAV	1
-14	ISLA	1
-15	ALPI	1
-15	ROMA	2
-16	ISLA	1
-16	ROMA	2
-16	SUPR	1
-16	SWEE	2
-17	LOVE	1
-17	NORT	1
-17	PEAN	2
-17	SWEE	1
-18	AUTU	2
-18	BITT	2
-18	CHER	1
-18	HEAV	1
-18	PACI	2
-18	ROMA	1
-19	FUDG	1
-20	HEAV	1
-22	BITT	1
-22	INTE	2
-23	FUDG	1
-23	NORT	1
-23	PEAN	1
-23	ROMA	2
-23	SWEE	1
-24	ALPI	2
-24	AUTU	1
-24	BITT	1
-24	NORT	2
-25	HEAV	1
-26	BITT	1
-27	CHER	1
-27	NORT	2
-27	SWE2	1
-28	ALPI	2
-28	HEAV	1
-28	PEAN	2
-29	ALLS	2
-29	BITT	1
-29	PEAN	1
-29	ROMA	1
-29	SWEE	2
-30	BITT	2
-30	SUPR	1
-30	SWE2	1
-30	SWEE	2
-31	SWEE	2
-32	LOVE	1
-33	CHER	1
-33	FUDG	1
-33	NORT	2
-33	PACI	2
-34	AUTU	1
-34	ROMA	1
-34	SUPR	2
-34	SWEE	1
-35	BITT	1
-35	FUDG	2
-35	ISLA	2
-35	NORT	1
-35	SWEE	1
-36	BITT	2
-36	CHER	1
-36	FUDG	2
-36	NORT	2
-36	ROMA	1
-36	SWEE	1
-37	MARZ	1
-38	BITT	1
-38	SWEE	2
-39	NORT	1
-39	ROMA	2
-40	BITT	2
-40	ROMA	1
-40	SWEE	2
-41	ALPI	1
-41	HEAV	1
-41	PACI	1
-41	SWE2	2
-41	SWEE	2
-42	ALPI	2
-42	FUDG	1
-42	INTE	2
-42	ROMA	1
-42	SWE2	1
-42	SWEE	1
-43	ALPI	1
-44	AUTU	1
-44	BITT	2
-45	ALLS	2
-45	CHER	2
-45	FUDG	1
-46	HEAV	1
-46	INTE	2
-46	PEAN	1
-46	SUPR	1
-47	BITT	1
-47	CHER	1
-47	LOVE	2
-47	NORT	2
-47	PEAN	1
-47	AUTU	1
-47	FUDG	1
-47	ISLA	2
-47	PACI	2
-47	ROMA	1
-49	FUDG	2
-50	BITT	1
-50	ISLA	2
-51	HEAV	2
-51	NORT	1
-52	CHER	2
-52	HEAV	1
-52	PEAN	1
-53	BITT	2
-53	MARZ	2
-53	NORT	2
-53	SUPR	1
-53	SWEE	1
-54	BITT	1
-54	FUDG	1
-54	HEAV	2
-54	NORT	2
-54	ROMA	1
-54	SWEE	1
-55	BITT	1
-56	FUDG	1
-56	HEAV	2
-57	ALPI	1
-57	SWE2	1
-57	SWEE	2
-58	ALPI	2
-58	INTE	1
-58	ROMA	1
-58	SWEE	2
-59	ALLS	2
-59	NORT	1
-59	ROMA	2
-59	SWE2	1
-59	SWEE	1
-60	LOVE	1
-60	PEAN	2
-60	ROMA	1
-60	SUPR	2
-60	SWE2	1
-60	SWEE	1
-61	LOVE	2
-62	ALPI	1
-62	NORT	2
-63	CHER	1
-63	PACI	1
-63	ROMA	2
-64	AUTU	2
-64	BITT	1
-64	FUDG	1
-64	LOVE	1
-65	AUTU	1
-65	FUDG	2
-65	ISLA	2
-65	LOVE	1
-65	NORT	1
-66	BITT	2
-66	FUDG	1
-66	LOVE	2
-66	MARZ	2
-66	NORT	1
-66	SWEE	1
-67	BITT	1
-68	NORT	2
-68	SWEE	1
-69	FUDG	1
-69	ROMA	1
-69	SWEE	2
-70	BITT	1
-70	CHER	1
-70	HEAV	2
-70	ISLA	2
-71	BITT	1
-71	FUDG	2
-71	LOVE	1
-71	SWE2	2
-71	SWEE	1
-72	ALPI	1
-72	BITT	1
-72	HEAV	1
-72	NORT	2
-73	BITT	2
-74	ALLS	1
-74	LOVE	1
-75	INTE	1
-75	ROMA	2
-75	SUPR	1
-76	ALPI	2
-76	PEAN	2
-76	SUPR	1
-76	SWEE	1
-77	CHER	2
-77	HEAV	1
-77	LOVE	2
-77	NORT	1
-77	PACI	1
-78	ALPI	2
-78	AUTU	2
-78	BITT	2
-78	FUDG	1
-78	INTE	1
-78	ROMA	1
-79	AUTU	1
-80	BITT	2
-80	ISLA	1
-81	INTE	1
-81	ISLA	2
-82	BITT	2
-82	INTE	1
-82	LOVE	1
-82	MARZ	2
-83	CHER	2
-83	INTE	1
-83	ISLA	1
-83	LOVE	1
-83	SWEE	1
-84	BITT	1
-84	CHER	1
-84	HEAV	2
-84	LOVE	2
-84	NORT	2
-84	PACI	1
-85	PACI	1
-86	LOVE	2
-86	NORT	1
-87	ALPI	2
-87	HEAV	1
-87	SWE2	1
-88	BITT	1
-88	FUDG	2
-88	HEAV	2
-88	INTE	1
-89	ALLS	1
-89	BITT	1
-89	LOVE	2
-89	NORT	2
-90	CHER	1
-90	HEAV	2
-90	ISLA	1
-90	LOVE	1
-90	PEAN	2
-90	SUPR	1
-91	LOVE	2
-92	CHER	1
-92	NORT	1
-93	NORT	2
-93	PACI	2
-93	ROMA	1
-94	ALPI	1
-94	AUTU	2
-94	CHER	1
-94	FUDG	1
-95	ISLA	1
-95	NORT	2
-95	PACI	1
-95	PEAN	2
-95	SWEE	1
-96	ALPI	2
-96	BITT	1
-96	CHER	1
-96	LOVE	2
-96	MARZ	1
-96	NORT	2
-97	FUDG	1
-98	BITT	2
-98	FUDG	1
-99	LOVE	1
-99	NORT	2
-100	BITT	1
-100	HEAV	1
-100	SUPR	2
-100	SWEE	2
-101	ALPI	2
-101	AUTU	1
-101	FUDG	2
-101	NORT	1
-101	SWE2	1
-102	BITT	2
-102	FUDG	2
-102	INTE	1
-102	LOVE	1
-102	ROMA	1
-102	SWEE	1
-103	PEAN	1
-104	ALLS	2
-104	BITT	1
-105	SUPR	1
-105	SWE2	2
-105	SWEE	2
-106	LOVE	1
-106	PEAN	1
-106	ROMA	1
-106	SWE2	2
-107	CHER	1
-107	NORT	2
-107	PACI	2
-107	ROMA	1
-108	AUTU	1
-108	BITT	1
-108	FUDG	2
-108	INTE	1
-108	LOVE	1
-108	SWEE	2
-109	ISLA	2
-110	CHER	1
-110	ROMA	2
-111	BITT	1
-111	PACI	1
-111	SWE2	2
-112	ALPI	1
-112	FUDG	1
-112	ROMA	2
-112	SWE2	1
-113	LOVE	1
-113	NORT	2
-113	ROMA	2
-113	SWE2	2
-113	SWEE	1
-114	ALPI	2
-114	BITT	2
-114	HEAV	1
-114	LOVE	1
-114	ROMA	1
-115	HEAV	1
-116	HEAV	2
-116	SWE2	1
-117	ALPI	2
-117	BITT	1
-117	LOVE	1
-118	BITT	1
-118	INTE	2
-118	LOVE	2
-118	NORT	1
-119	ALLS	2
-119	BITT	2
-119	HEAV	1
-119	NORT	1
-119	SUPR	1
-120	HEAV	1
-120	LOVE	2
-120	NORT	1
-120	PACI	1
-120	PEAN	1
-120	ROMA	2
-121	NORT	2
-122	CHER	1
-122	PACI	2
-123	NORT	2
-123	PACI	1
-123	ROMA	1
-124	AUTU	1
-124	FUDG	1
-124	HEAV	2
-124	ISLA	1
-125	AUTU	1
-125	BITT	1
-125	ISLA	2
-125	NORT	2
-125	PEAN	1
-126	BITT	1
-126	LOVE	1
-126	MARZ	2
-126	NORT	2
-126	PEAN	1
-126	SWEE	2
-127	PEAN	1
-128	ALPI	2
-128	SWEE	1
-129	BITT	2
-129	PEAN	1
-129	SWEE	1
-130	BITT	1
-130	HEAV	2
-130	ROMA	2
-130	SWEE	1
-131	ALPI	1
-131	INTE	2
-131	ROMA	1
-131	SWE2	1
-131	SWEE	2
-132	ALPI	2
-132	BITT	1
-132	FUDG	2
-132	INTE	1
-132	PEAN	1
-133	ALLS	2
-134	CHER	1
-134	FUDG	1
-134	NORT	1
-134	SUPR	2
-134	LOVE	2
-134	PEAN	2
-137	CHER	1
-137	NORT	2
-137	PACI	1
-137	PEAN	1
-137	ROMA	2
-138	AUTU	2
-138	CHER	1
-138	FUDG	1
-138	INTE	2
-138	ISLA	2
-138	NORT	1
-139	FUDG	1
-140	FUDG	2
-140	NORT	1
-141	AUTU	1
-141	BITT	2
-142	HEAV	1
-142	MARZ	2
-142	NORT	2
-143	CHER	1
-143	INTE	1
-143	PEAN	1
-143	ROMA	1
-143	SWEE	2
-144	BITT	1
-144	HEAV	2
-144	INTE	1
-144	ROMA	2
-144	SWE2	2
-144	SWEE	1
-145	SUPR	1
-146	ALPI	1
-146	SWE2	2
-147	ALPI	2
-147	FUDG	1
-147	INTE	1
-148	HEAV	1
-148	ROMA	2
-148	SUPR	2
-148	SWE2	1
-149	ALLS	1
-149	LOVE	2
-149	ROMA	2
-149	SUPR	1
-149	SWE2	1
-\.
-
-COPY zawartosc FROM STDIN NULL '';
-ALLS	B02	2
-ALLS	B04	2
-ALLS	B05	2
-ALLS	M01	2
-ALLS	M09	2
-ALLS	M12	2
-ALPI	M12	4
-ALPI	B04	5
-ALPI	M01	5
-ALPI	B02	4
-AUTU	M05	6
-AUTU	B03	6
-AUTU	W01	6
-AUTU	M08	6
-BITT	B07	4
-BITT	B04	5
-BITT	B05	5
-BITT	B06	5
-BITT	B02	5
-CHER	B07	4
-CHER	M11	4
-CHER	D07	4
-FUDG	F01	9
-FUDG	B03	4
-FUDG	F02	9
-FUDG	B05	4
-FUDG	B04	4
-HEAV	M14	2
-HEAV	D06	2
-HEAV	M16	3
-HEAV	B08	3
-HEAV	M15	2
-INTE	D08	6
-INTE	D09	6
-INTE	W06	6
-INTE	M05	6
-ISLA	M08	6
-ISLA	D08	6
-ISLA	M15	6
-ISLA	W02	6
-LOVE	D02	4
-LOVE	M06	4
-LOVE	W03	4
-MARZ	M08	3
-MARZ	M05	3
-MARZ	D11	3
-MARZ	B03	3
-MARZ	W01	3
-MARZ	M16	3
-NORT	B05	4
-NORT	D09	4
-NORT	M05	4
-NORT	M10	4
-NORT	W01	4
-NORT	W02	4
-PACI	M18	3
-PACI	M17	3
-PACI	D04	3
-PACI	W02	3
-PEAN	M04	18
-ROMA	B02	3
-ROMA	D04	3
-ROMA	D02	3
-ROMA	D09	3
-ROMA	M06	3
-ROMA	M07	3
-ROMA	M10	3
-ROMA	W03	3
-SUPR	D06	2
-SUPR	D03	2
-SUPR	D01	2
-SUPR	M02	2
-SUPR	M03	2
-SUPR	W06	2
-SWE2	B04	6
-SWE2	M06	6
-SWE2	M04	6
-SWEE	B07	3
-SWEE	B06	3
-SWEE	B04	3
-SWEE	B02	2
-SWEE	B05	3
-SWEE	M01	2
-SWEE	M13	2
-SWEE	M12	2
-SWEE	M11	2
-SWEE	M09	2
-\.
-
-COMMIT;
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (1, 'PEAN', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (3, 'ALPI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (3, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (3, 'CHER', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (3, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (4, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (4, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (4, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (5, 'AUTU', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (5, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (5, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (5, 'ISLA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (6, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (6, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (6, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (6, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (6, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (6, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (7, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (8, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (8, 'MARZ', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (9, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (9, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (10, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (10, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (11, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (11, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (11, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (11, 'SUPR', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (11, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (12, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (12, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (12, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (12, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (12, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (13, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (14, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (14, 'ISLA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (15, 'ALPI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (15, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (16, 'ISLA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (16, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (16, 'SUPR', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (16, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (17, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (17, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (17, 'PEAN', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (17, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (18, 'AUTU', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (18, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (18, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (18, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (18, 'PACI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (18, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (19, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (20, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (22, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (22, 'INTE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (23, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (23, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (23, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (23, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (23, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (24, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (24, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (24, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (24, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (25, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (26, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (27, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (27, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (27, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (28, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (28, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (28, 'PEAN', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (29, 'ALLS', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (29, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (29, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (29, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (29, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (30, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (30, 'SUPR', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (30, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (30, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (31, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (32, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (33, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (33, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (33, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (33, 'PACI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (34, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (34, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (34, 'SUPR', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (34, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (35, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (35, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (35, 'ISLA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (35, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (35, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (36, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (36, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (36, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (36, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (36, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (36, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (37, 'MARZ', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (38, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (38, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (39, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (39, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (40, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (40, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (40, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (41, 'ALPI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (41, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (41, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (41, 'SWE2', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (41, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (42, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (42, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (42, 'INTE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (42, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (42, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (42, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (43, 'ALPI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (44, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (44, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (45, 'ALLS', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (45, 'CHER', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (45, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (46, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (46, 'INTE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (46, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (46, 'SUPR', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (47, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (47, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (47, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (47, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (47, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (47, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (47, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (47, 'ISLA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (47, 'PACI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (47, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (49, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (50, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (50, 'ISLA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (51, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (51, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (52, 'CHER', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (52, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (52, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (53, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (53, 'MARZ', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (53, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (53, 'SUPR', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (53, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (54, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (54, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (54, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (54, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (54, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (54, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (55, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (56, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (56, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (57, 'ALPI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (57, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (57, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (58, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (58, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (58, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (58, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (59, 'ALLS', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (59, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (59, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (59, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (59, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (60, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (60, 'PEAN', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (60, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (60, 'SUPR', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (60, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (60, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (61, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (62, 'ALPI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (62, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (63, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (63, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (63, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (64, 'AUTU', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (64, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (64, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (64, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (65, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (65, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (65, 'ISLA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (65, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (65, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (66, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (66, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (66, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (66, 'MARZ', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (66, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (66, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (67, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (68, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (68, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (69, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (69, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (69, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (70, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (70, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (70, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (70, 'ISLA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (71, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (71, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (71, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (71, 'SWE2', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (71, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (72, 'ALPI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (72, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (72, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (72, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (73, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (74, 'ALLS', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (74, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (75, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (75, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (75, 'SUPR', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (76, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (76, 'PEAN', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (76, 'SUPR', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (76, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (77, 'CHER', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (77, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (77, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (77, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (77, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (78, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (78, 'AUTU', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (78, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (78, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (78, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (78, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (79, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (80, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (80, 'ISLA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (81, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (81, 'ISLA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (82, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (82, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (82, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (82, 'MARZ', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (83, 'CHER', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (83, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (83, 'ISLA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (83, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (83, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (84, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (84, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (84, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (84, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (84, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (84, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (85, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (86, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (86, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (87, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (87, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (87, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (88, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (88, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (88, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (88, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (89, 'ALLS', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (89, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (89, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (89, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (90, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (90, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (90, 'ISLA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (90, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (90, 'PEAN', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (90, 'SUPR', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (91, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (92, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (92, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (93, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (93, 'PACI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (93, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (94, 'ALPI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (94, 'AUTU', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (94, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (94, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (95, 'ISLA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (95, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (95, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (95, 'PEAN', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (95, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (96, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (96, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (96, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (96, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (96, 'MARZ', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (96, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (97, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (98, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (98, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (99, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (99, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (100, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (100, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (100, 'SUPR', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (100, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (101, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (101, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (101, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (101, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (101, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (102, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (102, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (102, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (102, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (102, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (102, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (103, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (104, 'ALLS', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (104, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (105, 'SUPR', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (105, 'SWE2', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (105, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (106, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (106, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (106, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (106, 'SWE2', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (107, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (107, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (107, 'PACI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (107, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (108, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (108, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (108, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (108, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (108, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (108, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (109, 'ISLA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (110, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (110, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (111, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (111, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (111, 'SWE2', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (112, 'ALPI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (112, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (112, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (112, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (113, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (113, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (113, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (113, 'SWE2', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (113, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (114, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (114, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (114, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (114, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (114, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (115, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (116, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (116, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (117, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (117, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (117, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (118, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (118, 'INTE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (118, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (118, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (119, 'ALLS', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (119, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (119, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (119, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (119, 'SUPR', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (120, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (120, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (120, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (120, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (120, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (120, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (121, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (122, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (122, 'PACI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (123, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (123, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (123, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (124, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (124, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (124, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (124, 'ISLA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (125, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (125, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (125, 'ISLA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (125, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (125, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (126, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (126, 'LOVE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (126, 'MARZ', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (126, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (126, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (126, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (127, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (128, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (128, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (129, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (129, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (129, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (130, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (130, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (130, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (130, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (131, 'ALPI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (131, 'INTE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (131, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (131, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (131, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (132, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (132, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (132, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (132, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (132, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (133, 'ALLS', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (134, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (134, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (134, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (134, 'SUPR', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (134, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (134, 'PEAN', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (137, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (137, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (137, 'PACI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (137, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (137, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (138, 'AUTU', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (138, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (138, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (138, 'INTE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (138, 'ISLA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (138, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (139, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (140, 'FUDG', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (140, 'NORT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (141, 'AUTU', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (141, 'BITT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (142, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (142, 'MARZ', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (142, 'NORT', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (143, 'CHER', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (143, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (143, 'PEAN', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (143, 'ROMA', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (143, 'SWEE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (144, 'BITT', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (144, 'HEAV', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (144, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (144, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (144, 'SWE2', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (144, 'SWEE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (145, 'SUPR', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (146, 'ALPI', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (146, 'SWE2', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (147, 'ALPI', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (147, 'FUDG', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (147, 'INTE', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (148, 'HEAV', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (148, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (148, 'SUPR', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (148, 'SWE2', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (149, 'ALLS', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (149, 'LOVE', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (149, 'ROMA', 2);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (149, 'SUPR', 1);
+INSERT INTO artykuly(idzamowienia, idpudelka, sztuk)    VALUES (149, 'SWE2', 1);
